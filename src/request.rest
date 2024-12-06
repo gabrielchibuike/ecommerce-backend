@@ -1,0 +1,62 @@
+
+###
+POST http://localhost:5000/api/user/auth/create_user
+Content-Type: application/json
+
+{
+ "firstname": "Mikel",
+ "lastname": "Mikel",
+ "gender": "Male",
+ "mobile" : "08141234653",
+ "dateOfBirth": "02/03/2002",
+  "email":"mikel@gmail.com",
+  "password": "Tfertdgr1@"
+}
+
+
+###
+POST http://localhost:5000/api/user/auth/login
+Content-Type: application/json
+
+{
+  "email":"mikel@gmail.com",
+  "password": "Tfertdgr1@"
+}
+
+###
+POST http://localhost:5000/api/access/refresh_token
+Content-Type: application/json
+
+{
+  "refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhYnJpZWxud2FndTIwMDJAZ21haWwuY29tIiwiaWF0IjoxNzA0MjkyNDE4LCJleHAiOjE3MDQyOTI0Nzh9.v3uWe2OUemepa1x4x1kjLodGt2k17fANsGN8Ok92CAQ"
+}
+
+###
+POST http://localhost:5000/api/access/recieve_user_email
+Content-Type: application/json
+
+{
+  "email":"mikelll@gmail.com"
+}
+
+###
+POST http://localhost:5000/verify_otp
+Content-Type: application/json
+
+{
+  "otp":"8000"
+}
+
+###
+POST http://localhost:5000/api/access/reset_password/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YzI2YjYwYzQ0NTBiYmZhMzY0YTY4MCIsImlhdCI6MTcwNzI5NjExNiwiZXhwIjoxNzA3Mjk2MTc2fQ.ydVZ36ajBNpiG6ahIbG9cIv-BInH4HRdR-92IBbdF5U
+Content-Type: application/json
+
+{
+   "password": "T56e44dfghjkl@",
+   "Cpassword": "T56e44dfghjkl@"
+}
+
+###
+Get http://localhost:5000/api/access/home
+Content-Type: application/json
+x-auth-token : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1pa2VsbGxAZ21haWwuY29tIiwiaWF0IjoxNzA3MjQyMzM3LCJleHAiOjE3MDcyNDIzOTd9.JdJ05EvNwYPkiNb6pxM8LELyVc2TmFA1XiJjlGR8Q-s"
