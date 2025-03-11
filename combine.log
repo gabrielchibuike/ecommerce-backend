@@ -317,3 +317,12 @@
 {"level":"info","message":"Connected to mongoDb","service":"authService","timestamp":"2025-03-11T13:51:35.209Z"}
 {"level":"info","message":"Server is running on port:  5000","service":"authService","timestamp":"2025-03-11T22:15:44.733Z"}
 {"level":"info","message":"Connected to Redis","service":"authService","timestamp":"2025-03-11T22:15:44.757Z"}
+{"level":"info","message":"Connected to mongoDb","service":"authService","timestamp":"2025-03-11T22:15:49.377Z"}
+{"level":"info","message":"Server is running on port:  5000","service":"authService","timestamp":"2025-03-11T22:18:46.842Z"}
+{"level":"info","message":"Connected to Redis","service":"authService","timestamp":"2025-03-11T22:18:46.898Z"}
+{"level":"info","message":"Connected to mongoDb","service":"authService","timestamp":"2025-03-11T22:18:49.152Z"}
+{"level":"info","message":"Server is running on port:  5000","service":"authService","timestamp":"2025-03-11T22:26:46.198Z"}
+{"level":"info","message":"Connected to Redis","service":"authService","timestamp":"2025-03-11T22:26:46.222Z"}
+{"level":"info","message":"Connected to mongoDb","service":"authService","timestamp":"2025-03-11T22:26:50.848Z"}
+{"level":"info","message":"Server is running on port:  5000","service":"authService","timestamp":"2025-03-11T22:27:27.456Z"}
+{"level":"info","message":"Connected to Redis","service":"authService","timestamp":"2025-03-11T22:27:27.478Z"}
