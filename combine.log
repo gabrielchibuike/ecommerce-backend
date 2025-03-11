@@ -336,3 +336,9 @@
 {"level":"info","message":"Server is running on port:  5000","service":"authService","timestamp":"2025-03-11T22:48:03.065Z"}
 {"level":"info","message":"Connected to Redis","service":"authService","timestamp":"2025-03-11T22:48:03.109Z"}
 {"level":"info","message":"Connected to mongoDb","service":"authService","timestamp":"2025-03-11T22:48:05.409Z"}
+{"level":"info","message":"Server is running on port:  5000","service":"authService","timestamp":"2025-03-11T23:12:17.312Z"}
+{"level":"info","message":"Connected to Redis","service":"authService","timestamp":"2025-03-11T23:12:17.385Z"}
+{"level":"info","message":"Connected to mongoDb","service":"authService","timestamp":"2025-03-11T23:12:19.929Z"}
+{"level":"info","message":"Server is running on port:  5000","service":"authService","timestamp":"2025-03-11T23:20:37.610Z"}
+{"code":"ERR_SOCKET_BAD_PORT","level":"error","message":"Redis Error: Port should be >= 0 and < 65536. Received type number (NaN).","service":"authService","stack":"RangeError: Port should be >= 0 and < 65536. Received type number (NaN).\n    at lookupAndConnect (node:net:1301:5)\n    at Socket.connect (node:net:1258:5)\n    at connect (node:net:242:17)\n    at C:\\Users\\HP\\Documents\\fullStackTypescriptProject\\Ecommerce\\Backend\\node_modules\\ioredis\\built\\connectors\\StandaloneConnector.js:54:66\n    at processTicksAndRejections (node:internal/process/task_queues:85:11)","timestamp":"2025-03-11T23:20:37.653Z"}
+{"level":"info","message":"Connected to mongoDb","service":"authService","timestamp":"2025-03-11T23:20:41.795Z"}
