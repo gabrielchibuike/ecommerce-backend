@@ -7,9 +7,9 @@ export interface orderType {
     state: string;
     postalCode: string;
     country: string;
-  };
+  }[];
   paymentStatus: string;
-  paymentTransaction: string | null;
+  transactionId: string | null;
   status: string;
-  totalAmount: number;
+  totalAmount?: number;
 }

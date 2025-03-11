@@ -4,7 +4,7 @@ import {
   delete_cart_service,
   find_existing_cart_item,
   get_cart_service,
-} from "../services/user.cart";
+} from "../services/cartService";
 
 export async function add_cart_controller(req: Request, res: Response) {
   const { userId, productId, quantity } = req.body;
@@ -81,7 +81,9 @@ export async function delete_cart_controller(req: Request, res: Response) {
   try {
     const cartItem = await get_cart_service(userId as string);
 
-    const result = cartItem?.items.filter((item) => item._id != itemId);
+    const result = cartItem?.items.filter(
+      (item) => (item._id as unknown as string) != itemId
+    );
 
     const item = await delete_cart_service(
       userId as string,

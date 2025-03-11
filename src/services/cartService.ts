@@ -1,5 +1,5 @@
 import { CartType } from "../Interface/productsType";
-import Cart from "../model/user.cart";
+import Cart from "../model/cartModel";
 
 export async function add_cart_service({ userId, items }: CartType) {
   const result = await Cart.create({

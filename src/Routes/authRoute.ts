@@ -3,13 +3,13 @@ import express, { Request, Response } from "express";
 import {
   create_user_controller,
   login_user_controller,
-} from "../../controllers/user.info";
+} from "../controllers/auth";
 
-const usersAuth = express.Router();
+const authRoute = express.Router();
 
-usersAuth.post("/create_user", create_user_controller);
+authRoute.post("/create_user", create_user_controller);
 
-usersAuth.post("/login", login_user_controller);
+authRoute.post("/login", login_user_controller);
 
 // product.get("/get_products", get_product_controller);
 
@@ -19,4 +19,4 @@ usersAuth.post("/login", login_user_controller);
 
 // product.delete("/delete_products/:id", delete_product_controller);
 
-export default usersAuth;
+export default authRoute;

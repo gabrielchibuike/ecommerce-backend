@@ -3,7 +3,7 @@ import {
   create_order_controller,
   get_order_controller,
   getOne_order_controller,
-} from "../../controllers/admin.order";
+} from "../controllers/admin.order";
 
 const adminOrderRoute = express.Router();
 

@@ -1,5 +1,5 @@
 import { UserType } from "../Interface/userType";
-import userDetails from "../model/user.model";
+import userDetails from "../model/authModel";
 
 export async function create_user_service({
   firstname,

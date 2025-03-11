@@ -3,7 +3,7 @@ import {
   create_user_service,
   find_user,
   login_user_service,
-} from "../services/user.info";
+} from "../services/authService";
 
 import { createAccSchema, emailSchema } from "../utils/validation";
 import jwt from "jsonwebtoken";
@@ -75,11 +75,10 @@ export async function login_user_controller(req: Request, res: Response) {
   try {
     const user = await login_user_service(email, hashedPassword);
 
-    if (user == null)
-      return res.status(401).send("Incorrect  email or password");
+    if (!user) return res.status(401).send("Incorrect  email or password");
 
     const accessToken = jwt.sign(
-      { id: user?._id, email: email },
+      { id: user?._id, email: email, role: user.role },
       ACCESS_TOKEN as string,
       {
         expiresIn: "1m",
@@ -87,7 +86,7 @@ export async function login_user_controller(req: Request, res: Response) {
     );
 
     const refreshToken = jwt.sign(
-      { id: user?._id, email: email },
+      { id: user?._id, email: email, role: user.role },
       REFRESH_TOKEN as string,
       { expiresIn: "7d" } // 7 days
     );

@@ -4,7 +4,7 @@ import {
   readSavedItem_service,
   removeSavedItem_service,
   saveItem_service,
-} from "../services/user.saveItem";
+} from "../services/saveItemService";
 
 export async function saveItem_controller(req: Request, res: Response) {
   const { userId, productId, quantity } = req.body;
@@ -56,7 +56,9 @@ export async function removeSavedItem_controller(req: Request, res: Response) {
   try {
     const savedItem = await readSavedItem_service(userId as string);
 
-    const result = savedItem?.items.filter((item) => item._id != itemId);
+    const result = savedItem?.items.filter(
+      (item) => (item._id as unknown as string) != itemId
+    );
 
     const item = await removeSavedItem_service(
       userId as string,

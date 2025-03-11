@@ -16,6 +16,7 @@ const userSchema = new mongoose.Schema({
     required: true,
   },
   profileImg: { type: String },
+  role: { type: String, enum: ["user", "admin"], default: "user" },
   savedItem: {
     type: [
       {

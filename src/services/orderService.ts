@@ -1,12 +1,12 @@
 import { orderType } from "../Interface/orderType";
-import order from "../model/orders.model";
+import order from "../model/orderModel";
 
 export async function create_order_service({
   userId,
   items,
   shippingAddress,
   paymentStatus,
-  paymentTransaction,
+  transactionId,
   status,
   totalAmount,
 }: orderType) {
@@ -15,9 +15,8 @@ export async function create_order_service({
     items,
     shippingAddress,
     paymentStatus,
-    paymentTransaction,
+    transactionId,
     status,
-    totalAmount,
   });
   return result;
 }
@@ -46,6 +45,12 @@ export async function cancle_order_service(userId: string, status: string) {
     { status: status },
     { new: true }
   );
+
+  return result;
+}
+
+export async function delete_order_service(userId: string) {
+  const result = await order.deleteOne({ userId });
 
   return result;
 }

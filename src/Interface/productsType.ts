@@ -1,12 +1,17 @@
 export interface productsType {
   id?: string;
   product_name: string;
-  product_image: string;
-  category_name: string;
-  price: number;
+  product_category: string;
+  sub_category: string;
+  manufacturer_brand: string;
   description: string;
-  quantity: number;
-  specification: [{ color: []; size: [] }];
+  color: string[];
+  size: string[];
+  status: string;
+  quantity: string;
+  price: string;
+  discount: string;
+  product_image: string[];
 }
 
 export interface CartType {
