@@ -5,7 +5,7 @@
   "scripts": {
     "build": "rimraf ./dist && tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./src/server.js",
+    "start": "node server.js",
     "dev": "nodemon -L ./src/server.ts"
   },
   "author": "",
