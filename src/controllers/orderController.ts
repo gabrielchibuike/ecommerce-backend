@@ -44,14 +44,20 @@ export async function create_order_controller(req: Request, res: Response) {
     // get user email
     const userEmail = await userDetails.findById(userId);
 
-    console.log(userEmail);
-
     // initiate payment
-    const result = await initiatePayment(userEmail!.email, totalPrices, order);
+    const response = await initiatePayment(
+      userEmail!.email,
+      totalPrices,
+      order
+    );
 
-    res.status(200).send(result);
+    order.transactionId = response.data.data.reference;
+    await order.save();
 
-    // res.status(200).send(products);
+    res.status(200).json({
+      success: true,
+      paymentLink: response.data.data.authorization_url,
+    });
   } catch (err: any) {
     res.status(500).json({ error: err.message });
   }
