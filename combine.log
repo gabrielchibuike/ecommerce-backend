@@ -2867,3 +2867,15 @@
 {"level":"info","message":"Server is running on port:  5000","service":"authService","timestamp":"2025-03-13T04:07:36.212Z"}
 {"level":"info","message":"Connected to Redis","service":"authService","timestamp":"2025-03-13T04:07:36.309Z"}
 {"level":"info","message":"Connected to mongoDb","service":"authService","timestamp":"2025-03-13T04:07:36.400Z"}
+{"level":"info","message":"Server is running on port:  5000","service":"authService","timestamp":"2025-03-13T04:09:06.241Z"}
+{"level":"info","message":"Connected to Redis","service":"authService","timestamp":"2025-03-13T04:09:06.305Z"}
+{"level":"info","message":"Connected to mongoDb","service":"authService","timestamp":"2025-03-13T04:09:06.363Z"}
+{"level":"info","message":"Server is running on port:  5000","service":"authService","timestamp":"2025-03-13T06:12:47.268Z"}
+{"level":"info","message":"Connected to Redis","service":"authService","timestamp":"2025-03-13T06:12:47.339Z"}
+{"level":"info","message":"Connected to mongoDb","service":"authService","timestamp":"2025-03-13T06:12:47.453Z"}
+{"level":"info","message":"Recieved POST request to /api/order/create_order ","service":"authService","timestamp":"2025-03-13T06:14:37.976Z"}
+{"level":"info","message":"Request body, [object Object]  ","service":"authService","timestamp":"2025-03-13T06:14:37.978Z"}
+{"$__":{"activePaths":{"paths":{"__v":"init","_id":"init","address":"init","dateCreated":"init","dateOfBirth":"init","dateUpdated":"init","email":"init","firstname":"init","gender":"init","lastname":"init","mobile":"init","password":"init","role":"init","savedItem":"default","visible":"init"},"states":{"default":{"savedItem":true},"init":{"__v":true,"_id":true,"address":true,"dateCreated":true,"dateOfBirth":true,"dateUpdated":true,"email":true,"firstname":true,"gender":true,"lastname":true,"mobile":true,"password":true,"role":true,"visible":true},"require":{}}},"skipId":true},"$isNew":false,"_doc":{"__v":0,"_id":"673c8e504f3d6fac3d2f9fea","address":[],"dateCreated":"2024-11-19T12:56:29.382Z","dateOfBirth":"02/03/2002","dateUpdated":"2024-11-19T12:56:29.382Z","email":"mikel@gmail.com","firstname":"Mikel","gender":"Male","lastname":"Mikel","mobile":"08141234653","password":"bf485063ea053c63b652b943b8c1389a3e75ce40","role":"Admin","savedItem":[],"visible":true},"level":"info","message":"user email","service":"authService","timestamp":"2025-03-13T06:14:38.082Z"}
+{"level":"info","message":"Server is running on port:  5000","service":"authService","timestamp":"2025-03-13T06:17:57.160Z"}
+{"level":"info","message":"Connected to Redis","service":"authService","timestamp":"2025-03-13T06:17:57.184Z"}
+{"level":"info","message":"Connected to mongoDb","service":"authService","timestamp":"2025-03-13T06:17:57.228Z"}

@@ -9,6 +9,7 @@ import {
 import ProductDetails from "../model/productModel";
 import userDetails from "../model/authModel";
 import { initiatePayment } from "../utils/payment";
+import { logger } from "../utils/logger";
 
 export async function create_order_controller(req: Request, res: Response) {
   const { userId, items, shippingAddress } = req.body;
@@ -42,6 +43,8 @@ export async function create_order_controller(req: Request, res: Response) {
 
     // get user email
     const userEmail = await userDetails.findById(userId);
+
+    console.log(userEmail);
 
     // initiate payment
     const result = await initiatePayment(userEmail!.email, totalPrices, order);
