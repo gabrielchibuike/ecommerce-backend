@@ -40,7 +40,7 @@ const orderSchema = new mongoose.Schema(
       enum: ["Pending", "Processing", "Shipped", "Delivered", "Cancelled"],
       default: "Pending",
     },
-    totalAmount: { type: Number, required: true },
+    totalPrices: { type: Number, required: true },
   },
   { timestamps: true }
 );

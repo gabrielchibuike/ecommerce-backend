@@ -11,14 +11,7 @@ import userDetails from "../model/authModel";
 import { initiatePayment } from "../utils/payment";
 
 export async function create_order_controller(req: Request, res: Response) {
-  const {
-    userId,
-    items,
-    shippingAddress,
-    paymentStatus,
-    transactionId,
-    status,
-  } = req.body;
+  const { userId, items, shippingAddress } = req.body;
   try {
     const existing_order = await find_existing_order(userId);
 
@@ -41,9 +34,9 @@ export async function create_order_controller(req: Request, res: Response) {
       userId,
       items,
       shippingAddress,
-      paymentStatus: "pending",
+      paymentStatus: "Pending",
       transactionId: null,
-      status: "pending",
+      status: "Pending",
       totalPrices,
     });
 
@@ -53,7 +46,7 @@ export async function create_order_controller(req: Request, res: Response) {
     // initiate payment
     const result = await initiatePayment(userEmail!.email, totalPrices, order);
 
-    // res.status(200).send(result);
+    res.status(200).send(result);
 
     // res.status(200).send(products);
   } catch (err: any) {
