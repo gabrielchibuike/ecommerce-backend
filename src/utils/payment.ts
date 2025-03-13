@@ -3,7 +3,11 @@ import { logger } from "./logger";
 
 //  const callbackUrl = `http://localhost:3000/verify?reference=${order._id}`;
 
-export async function initiatePayment(email: string, amount: number) {
+export async function initiatePayment(
+  email: string,
+  amount: number,
+  order: any
+) {
   try {
     // initiate payment on Paystack
     const response = await axios.post(
@@ -11,6 +15,7 @@ export async function initiatePayment(email: string, amount: number) {
       {
         email,
         amount: amount * 100, // Convert amount to Kobo
+        callback_url: `${process.env.PAYSTACK_CALLBACK_URL}?reference=${order._id}`,
       },
       {
         headers: {

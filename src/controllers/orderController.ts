@@ -26,7 +26,7 @@ export async function create_order_controller(req: Request, res: Response) {
       return res.status(200).send("Order has already been placed");
 
     let totalPrices = 0;
-    items.map(async (item: any) => {
+    for (const item of items) {
       const product = await ProductDetails.findById(item.productId);
 
       if (!product || product.quantity! < item.quantity) {
@@ -34,24 +34,26 @@ export async function create_order_controller(req: Request, res: Response) {
       }
 
       totalPrices += parseInt(product.price!) * item.quantity;
+    }
 
-      // get user email
-      const userEmail = await userDetails.findById(userId);
-
-      // initiate payment
-      const result = await initiatePayment(userEmail!.email, totalPrices);
-
-      res.status(200).send(result);
+    // create the order
+    const order = await create_order_service({
+      userId,
+      items,
+      shippingAddress,
+      paymentStatus: "pending",
+      transactionId: null,
+      status: "pending",
+      totalPrices,
     });
 
-    // const products = await create_order_service({
-    //   userId,
-    //   items,
-    //   shippingAddress,
-    //   paymentStatus,
-    //   transactionId,
-    //   status,
-    // });
+    // get user email
+    const userEmail = await userDetails.findById(userId);
+
+    // initiate payment
+    const result = await initiatePayment(userEmail!.email, totalPrices, order);
+
+    // res.status(200).send(result);
 
     // res.status(200).send(products);
   } catch (err: any) {

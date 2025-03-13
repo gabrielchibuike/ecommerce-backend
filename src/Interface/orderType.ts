@@ -11,5 +11,5 @@ export interface orderType {
   paymentStatus: string;
   transactionId: string | null;
   status: string;
-  totalAmount?: number;
+  totalPrices?: number;
 }

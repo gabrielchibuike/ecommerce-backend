@@ -8,7 +8,7 @@ export async function create_order_service({
   paymentStatus,
   transactionId,
   status,
-  totalAmount,
+  totalPrices,
 }: orderType) {
   const result = await order.create({
     userId,
@@ -17,6 +17,7 @@ export async function create_order_service({
     paymentStatus,
     transactionId,
     status,
+    totalPrices,
   });
   return result;
 }
