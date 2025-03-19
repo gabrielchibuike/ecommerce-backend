@@ -51,7 +51,6 @@ export async function create_order_controller(req: Request, res: Response) {
       order
     );
 
-    console.log(response.data.reference);
     if (!response) {
       logger.error("Paystack Error:", response.data.message);
       return res.status(500).json({ error: response.data.message });
