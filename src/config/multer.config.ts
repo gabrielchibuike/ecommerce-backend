@@ -9,7 +9,7 @@ const storage = multer.diskStorage({
     const original = file.originalname.split(".")[0];
     const ext = path.extname(file.originalname);
     const newExt = original + ext;
-    const arrExt = [".jpeg", ".png", ".jpg"];
+    const arrExt = [".jpeg", ".png", ".jpg", ".avif"];
     if (arrExt.includes(ext)) {
       cb(null, newExt);
     } else {
@@ -18,7 +18,7 @@ const storage = multer.diskStorage({
   },
 });
 
-export const upload = multer({
+const upload = multer({
   storage: storage,
   limits: {
     fileSize: 1048576 * 5,

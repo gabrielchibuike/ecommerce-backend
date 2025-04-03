@@ -7,8 +7,9 @@ import {
   getOne_product_controller,
 } from "../controllers/productsController";
 import { authorizePermission, verifyToken } from "../middleware/verifyJwt";
-import { upload } from "../config/multer.config";
+// import { upload } from "../config/multer.config";
 import { cacheMiddleware } from "../middleware/cacheMiddleware";
+import { upload } from "../config/cloudinary.config";
 
 const productRoute = express.Router();
 

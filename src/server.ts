@@ -32,9 +32,14 @@ app.use(cors());
 app.use(express.static("src/uploads"));
 
 app.use((req: Request, res: Response, next: NextFunction) => {
-  logger.info(`Recieved ${req.method} request to ${req.url} `);
-  logger.info(`Request body, ${req.body}  `);
-  next();
+  try {
+    logger.info(`Recieved ${req.method} request to ${req.url} `);
+    logger.info(`Request body, ${req.body}  `);
+    console.log("No issue here");
+    next();
+  } catch (err) {
+    logger.error("Unhandle Rejection", err);
+  }
 });
 
 // DDos protection

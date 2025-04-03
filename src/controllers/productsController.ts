@@ -9,6 +9,7 @@ import {
 } from "../services/productService";
 import { StatusCodes } from "http-status-codes";
 import redis from "../redisClient";
+import { logger } from "../utils/logger";
 
 export async function create_product_controller(req: Request, res: Response) {
   try {
@@ -16,6 +17,7 @@ export async function create_product_controller(req: Request, res: Response) {
 
     const files = req.files as Express.Multer.File[];
 
+    // console.log(files);
     const {
       product_name,
       product_category,
@@ -47,13 +49,15 @@ export async function create_product_controller(req: Request, res: Response) {
       quantity,
       price,
       discount,
-      product_image: files.map((file) => file.filename),
+      product_image: files.map((file) => file.path),
     });
 
     await redis.del("/api/products/get_products");
 
     res.status(201).json({ data: products, message: "Created Sucessfully" });
   } catch (err: any) {
+    console.log(err);
+
     res.status(500).json({ error: err.message });
   }
 }

@@ -11,7 +11,8 @@ const errorHandler = (
   res: Response,
   next: NextFunction
 ) => {
-  logger.error(err.stack);
+  // console.log(err);
+  logger.error(err.message);
 
   res
     .status(err.status || 500)
