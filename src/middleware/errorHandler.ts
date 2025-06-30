@@ -1,22 +1,24 @@
-import Express, { Request, Response, NextFunction } from "express";
+// src/middleware/errorHandler.ts
+import { Request, Response, NextFunction } from "express";
 import { logger } from "../utils/logger";
 
-interface customError extends Error {
-  status: number;
+interface CustomError extends Error {
+  statusCode?: number;
 }
 
-const errorHandler = (
-  err: customError,
+export const errorHandler = (
+  err: CustomError,
   req: Request,
   res: Response,
   next: NextFunction
 ) => {
-  // console.log(err);
-  logger.error(err.message);
+  const statusCode = err.statusCode || 500;
+  const message = err.message || "Internal Server Error";
 
-  res
-    .status(err.status || 500)
-    .json({ message: err.message || "internal server error" });
+  logger.error(`[${req.method}] ${req.url} - ${message}`);
+
+  res.status(statusCode).json({
+    success: false,
+    message,
+  });
 };
-
-export { errorHandler };

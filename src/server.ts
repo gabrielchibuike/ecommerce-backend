@@ -27,8 +27,14 @@ mongoose
 
 app.use(helmet());
 app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser());
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+    credentials: true,
+  })
+);
 app.use(express.static("src/uploads"));
 
 app.use((req: Request, res: Response, next: NextFunction) => {
@@ -64,7 +70,7 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 
 app.use("/api", allRoutes);
 
-app.post("/auth/refresh", verifyRefreshToken);
+app.post("/api/refreshToken", verifyRefreshToken);
 
 app.use(errorHandler);
 

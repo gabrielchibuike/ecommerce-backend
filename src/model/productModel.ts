@@ -1,9 +1,10 @@
 import mongoose from "mongoose";
 
 const ProductSchema = new mongoose.Schema({
-  product_name: { type: String, require: true },
+  main_category: { type: String, require: true },
   product_category: { type: String, require: true },
   sub_category: { type: String, require: true },
+  product_name: { type: String, require: true },
   manufacturer_brand: { type: String, require: true },
   description: { type: String },
   color: { type: [], require: true },

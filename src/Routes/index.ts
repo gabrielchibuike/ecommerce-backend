@@ -6,6 +6,8 @@ import productRoute from "./productsRoute";
 import savedItemRoute from "./saveItemRoute";
 import { verifyToken } from "../middleware/verifyJwt";
 import orderRoute from "./orderRoute";
+import ShippingAddress from "../model/shippingAddressModel";
+import shippingRoute from "./shippingAddressRoutes";
 
 const allRoutes = express.Router();
 
@@ -18,5 +20,7 @@ allRoutes.use("/order", orderRoute);
 allRoutes.use("/products", productRoute);
 
 allRoutes.use("/saveItem", savedItemRoute);
+
+allRoutes.use("/shippingAddress", shippingRoute);
 
 export default allRoutes;

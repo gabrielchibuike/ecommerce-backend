@@ -25,11 +25,11 @@ export async function verifyToken(
 
     next();
   } catch (err) {
-    console.log(err);
+    // console.log(err);
     if (err instanceof JsonWebTokenError) {
       console.log(err);
 
-      return res.status(403).send(err.message); // Forbidden
+      return res.status(403).json({ message: "Forbidden", statusCode: 403 }); // Forbidden
     }
   }
 }

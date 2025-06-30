@@ -10,19 +10,13 @@ interface CreateAccSchema {
 }
 
 export const createAccSchema: Joi.ObjectSchema<CreateAccSchema> = Joi.object({
-  firstname: Joi.string().required().trim().messages({
+  firstName: Joi.string().required().trim().messages({
     "string.empty": "This field is required",
   }),
 
-  lastname: Joi.string().required().trim().messages({
+  lastName: Joi.string().required().trim().messages({
     "string.empty": "This field is required",
   }),
-
-  mobile: Joi.string().min(11).max(11).required(),
-
-  gender: Joi.string().required(),
-
-  dateOfBirth: Joi.string().required(),
 
   email: Joi.string()
     .email({ tlds: { allow: ["com", "net"] } })
@@ -65,7 +59,7 @@ export const emailSchema = Joi.object({
   email: Joi.string().email({ tlds: { allow: ["com", "net"] } }),
 });
 
-export const updateSchema = Joi.object({
+export const updatePasswordSchema = Joi.object({
   password: passwordComplexity({
     min: 6,
     max: 20,
@@ -75,7 +69,26 @@ export const updateSchema = Joi.object({
     symbol: 1,
     requirementCount: 6,
   }),
-  Cpassword: Joi.string().valid(Joi.ref("password")).required().messages({
-    "any.only": "Retyped password must match the password",
-  }),
 });
+
+export const shippingAddressSchema: Joi.ObjectSchema<CreateAccSchema> =
+  Joi.object({
+    firstName: Joi.string().required().trim().messages({
+      "string.empty": "This field is required",
+    }),
+
+    lastName: Joi.string().required().trim().messages({
+      "string.empty": "This field is required",
+    }),
+    phone: Joi.string().min(11).max(11).required(),
+    email: Joi.string()
+      .email({ tlds: { allow: ["com", "net"] } })
+      .messages({
+        "string.empty": "This field is required",
+        "string.email": "email must be a valid email",
+      }),
+    StreetAddress: Joi.string().required(),
+    additionalInfo: Joi.string().optional(),
+    city: Joi.string().required(),
+    state: Joi.string().required(),
+  });

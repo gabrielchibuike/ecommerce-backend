@@ -2,16 +2,25 @@ import { Request, Response } from "express";
 import {
   create_user_service,
   find_user,
+  get_user_email_service,
   login_user_service,
+  reset_password_service,
+  verify_otp_service,
 } from "../services/authService";
 
-import { createAccSchema, emailSchema } from "../utils/validation";
+import {
+  createAccSchema,
+  emailSchema,
+  updatePasswordSchema,
+} from "../utils/validation";
 import jwt from "jsonwebtoken";
 import sha1 from "sha1";
 import dotenv from "dotenv";
 // import { generateOtpEmail } from "../utils/generateOtpEmail";
 import { UserType } from "../Interface/userType";
 import { save_refresh_token } from "../utils/general";
+import { generateOtpEmail } from "../utils/generateOtpEmail";
+import { logger } from "../utils/logger";
 
 dotenv.config();
 
@@ -19,30 +28,19 @@ const ACCESS_TOKEN = process.env.ACCESS_TOKEN_PRIVATE_KEY;
 const REFRESH_TOKEN = process.env.REFRESH_TOKEN_PRIVATE_KEY;
 
 export async function create_user_controller(req: Request, res: Response) {
-  const {
-    firstname,
-    lastname,
-    gender,
-    mobile,
-    dateOfBirth,
-    email,
-    password,
-  }: UserType = req.body;
+  const { firstName, lastName, email, password }: UserType = req.body;
+  console.log("git");
 
   try {
     const hashedpassword = sha1(password as string);
     const { error } = createAccSchema.validate({
-      firstname,
-      lastname,
-      gender,
-      mobile,
-      dateOfBirth,
+      firstName,
+      lastName,
       email,
       password,
     });
     if (error)
-      return res.status(401).send(error.details.map((err) => err.message));
-    console.log(hashedpassword);
+      return res.status(400).send(error.details.map((err) => err.message));
 
     const existing_user = await find_user(email);
 
@@ -50,16 +48,13 @@ export async function create_user_controller(req: Request, res: Response) {
       return res.status(409).send("User already exist on database");
 
     const user_id = await create_user_service({
-      firstname,
-      lastname,
-      gender,
-      mobile,
-      dateOfBirth,
+      firstName,
+      lastName,
       email,
       hashedpassword,
     });
 
-    res.status(200).send("Account Created!!");
+    res.status(200).json({ message: "Account Created!!" });
   } catch (error: any) {
     console.log(error);
 
@@ -81,7 +76,7 @@ export async function login_user_controller(req: Request, res: Response) {
       { id: user?._id, email: email, role: user.role },
       ACCESS_TOKEN as string,
       {
-        expiresIn: "1m",
+        expiresIn: "40s",
       }
     );
 
@@ -97,65 +92,74 @@ export async function login_user_controller(req: Request, res: Response) {
       .status(200)
       .cookie("refreshToken", refreshToken, {
         httpOnly: true,
-        secure: true,
-        sameSite: "strict",
+        secure: false,
+        sameSite: "lax",
       })
-      .send(accessToken);
+      .json({ data: accessToken, message: "Login sucessful" });
   } catch (error: any) {
     res.status(500).json({ error: error.message });
   }
 }
 
-// export async function getUser_info_controller(req: Request, res: Response) {
-//   try {
-//     if (!req.file) return res.status(404).send("File not recieved");
-//     const { filename } = req.file!;
+// forget password section
+export async function get_user_email_controller(req: Request, res: Response) {
+  try {
+    const { email }: UserType = req.body;
 
-//     // const result = await cloud_upload.uploader.upload(req.file!.path, {
-//     //   folder: `${filename.split(".")[0]}`,
-//     //   public_id: filename.split(".")[0],
-//     // });
-//     // console.log(result);
+    logger.info("Reset email ", email);
 
-//     const { id, email, title, bio, socialHandle }: UserType = JSON.parse(
-//       req.body.jsonData
-//     );
+    const { error } = emailSchema.validate(req.body);
 
-//     console.log(id, email);
-//     await getUser_info_service(id, filename, title, bio, socialHandle);
+    if (error) return res.status(401).send(error.details[0]!.message);
 
-//     await generateOtpEmail(res, email);
-//   } catch (error: any) {
-//     res.status(500).json({ error: error.message });
-//   }
-// }
+    const user = await get_user_email_service(email);
 
-// export async function get_user_email_controller(req: Request, res: Response) {
-//   try {
-//     const { email }: UserType = req.body;
+    if (!user) return res.status(400).json({ message: "User not found" });
 
-//     const { error } = emailSchema.validate(req.body);
+    const result = await generateOtpEmail(res, email);
 
-//     if (error) return res.status(401).send(error.details[0]!.message);
+    return res
+      .status(200)
+      .json({ message: "OTP sent successfully", data: result });
+  } catch (error: any) {
+    res.status(500).json({ error: error.message });
+  }
+}
 
-//     const user = await get_user_email_service(email);
+export async function verify_otp_controller(req: Request, res: Response) {
+  try {
+    const { otp } = req.body;
 
-//     if (!user) return res.status(400).json({ message: "User not found" });
+    const result = await verify_otp_service(otp);
 
-//     await generateOtpEmail(res, email);
-//   } catch (error: any) {
-//     res.status(500).json({ error: error.message });
-//   }
-// }
+    if (!result) {
+      throw new Error("Fail to verify");
+    }
+    res.status(200).json({ message: "success!!" });
+  } catch (error: any) {
+    res.status(500).json({ error: error.message });
+  }
+}
 
-// export async function verify_otp_controller(req: Request, res: Response) {
-//   try {
-//     const { otp }: UserType = req.body;
+export async function reset_password_controller(req: Request, res: Response) {
+  try {
+    const { password, email } = req.body;
 
-//     await verify_otp_service(otp);
+    const hashedpassword = sha1(password as string);
 
-//     res.status(200).send("success!!");
-//   } catch (error: any) {
-//     res.status(500).send(error.message);
-//   }
-// }
+    const { error } = updatePasswordSchema.validate({
+      password,
+    });
+    if (error)
+      return res.status(400).send(error.details.map((err) => err.message));
+
+    const result = await reset_password_service(hashedpassword, email);
+
+    if (!result) throw new Error("Fial to update password");
+
+    res.status(200).json({ message: "Password reset successfully" });
+  } catch (error: any) {
+    res.status(500).json({ error: error.message });
+    throw new Error(error.message);
+  }
+}

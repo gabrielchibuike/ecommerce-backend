@@ -2,21 +2,22 @@ import express, { Request, Response } from "express";
 
 import {
   create_user_controller,
+  get_user_email_controller,
   login_user_controller,
+  reset_password_controller,
+  verify_otp_controller,
 } from "../controllers/auth";
 
 const authRoute = express.Router();
 
-authRoute.post("/create_user", create_user_controller);
+authRoute.post("/createUser", create_user_controller);
 
 authRoute.post("/login", login_user_controller);
 
-// product.get("/get_products", get_product_controller);
+authRoute.post("/getUserEmail", get_user_email_controller);
 
-// product.get("/get_products/:id", getOne_product_controller);
+authRoute.post("/verifyOtp", verify_otp_controller);
 
-// product.put("/edit_products/:id", edit_product_controller);
-
-// product.delete("/delete_products/:id", delete_product_controller);
+authRoute.post("/resetPassword", reset_password_controller);
 
 export default authRoute;
