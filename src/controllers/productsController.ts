@@ -95,7 +95,7 @@ export async function search_product_controller(req: Request, res: Response) {
       limit
     );
 
-    res.json({ products: products, total });
+    return res.status(200).json({ products: products, total });
   } catch (error: any) {
     res.status(500).json({ error: error.message });
   }
@@ -127,23 +127,23 @@ export async function get_product_controller(req: Request, res: Response) {
     const sort_by = (req.query.sort_by as string) || "createdAt";
     const sort_order = (req.query.sort_order as string) || "desc";
 
-    // Generate a unique cache key based on filters, pagination, and sorting
-    const cacheKey = `/api/products/get_products?${JSON.stringify({
-      ...filters,
-      page,
-      limit,
-      sort_by,
-      sort_order,
-    })}`;
+    // // Generate a unique cache key based on filters, pagination, and sorting
+    // const cacheKey = `/api/products/get_products?${JSON.stringify({
+    //   ...filters,
+    //   page,
+    //   limit,
+    //   sort_by,
+    //   sort_order,
+    // })}`;
 
-    // Check cache
-    const cachedData = await redis.get(cacheKey);
-    if (cachedData) {
-      logger.info("sending cached data");
-      return res.status(200).json(JSON.parse(cachedData));
-    }
+    // // Check cache
+    // const cachedData = await redis.get(cacheKey);
+    // if (cachedData) {
+    //   logger.info("sending cached data");
+    //   return res.status(200).json(JSON.parse(cachedData));
+    // }
 
-    console.log(filters, "kol");
+    // console.log(filters, "kol");
 
     // Fetch filtered products
     const { products, total } = await get_product_service_with_filters({
@@ -154,8 +154,14 @@ export async function get_product_controller(req: Request, res: Response) {
       sort_order,
     });
 
-    // Cache the response for 5 minutes
-    await redis.setex(cacheKey, 300, JSON.stringify({ products, total }));
+    // Cache the response for 5 minutes using the cacheKey from middleware
+    if (res.locals.cacheKey) {
+      await redis.setex(
+        res.locals.cacheKey,
+        300,
+        JSON.stringify({ products, total })
+      );
+    }
 
     res.status(200).json({ products, total, page, limit });
 
