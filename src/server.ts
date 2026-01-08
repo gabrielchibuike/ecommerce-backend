@@ -12,7 +12,7 @@ import { RateLimiterRedis } from "rate-limiter-flexible";
 import redisClient from "./redisClient";
 import { errorHandler } from "./middleware/errorHandler";
 import logger from "./config/logger";
-import { createProductFromUrl } from "./controllers/aiProductController";
+// import { createProductFromUrl } from "./controllers/aiProductController";
 
 dotenv.config();
 
@@ -71,7 +71,7 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 
 app.use("/api", allRoutes);
 
-app.post("/api/createProductFromUrl", createProductFromUrl);
+// app.post("/api/createProductFromUrl", createProductFromUrl);
 
 app.get("/api/refreshToken", verifyRefreshToken);
 
