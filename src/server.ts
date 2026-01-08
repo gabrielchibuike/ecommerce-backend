@@ -32,7 +32,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "https://store-frontend-sage-xi.vercel.app/",
+    origin: "https://store-frontend-sage-xi.vercel.app",
     // origin: "http://localhost:3000",
     credentials: true,
   })
