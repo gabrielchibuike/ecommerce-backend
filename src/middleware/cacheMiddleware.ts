@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import redis from "../redisClient";
-import { logger } from "../utils/logger";
+import logger from "../config/logger";
 
 export const cacheMiddleware = async (
   req: Request,

@@ -1,0 +1,64 @@
+[31m[1merror[22m[39m: [POST] /api//createProductFromUrl - Unexpected token '"', ""https://w"... is not valid JSON 2025-12-16 01:58:49:5849
+[31m[1merror[22m[39m: [POST] /api/createProductFromUrl - Unexpected token '"', ""https://w"... is not valid JSON 2025-12-16 02:00:32:032
+[31m[1merror[22m[39m: [POST] /api/createProductFromUrl - Unexpected token '"', ""https://w"... is not valid JSON 2025-12-16 02:03:28:328
+[31m[1merror[22m[39m: [POST] /api/createProductFromUrl - Unexpected token '"', ""https://w"... is not valid JSON 2025-12-16 02:13:39:1339
+[31m[1merror[22m[39m: Gemini extraction failed: {"error":{"code":400,"message":"Invalid value at 'contents[0].parts[2].inline_data.data' (TYPE_BYTES), Base64 decoding failed for \"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'/%3E\"","status":"INVALID_ARGUMENT","details":[{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"contents[0].parts[2].inline_data.data","description":"Invalid value at 'contents[0].parts[2].inline_data.data' (TYPE_BYTES), Base64 decoding failed for \"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'/%3E\""}]}]}} 2025-12-16 09:20:39:2039
+[31m[1merror[22m[39m: URL extraction failed {"error":{"code":503,"message":"The model is overloaded. Please try again later.","status":"UNAVAILABLE"}} 2025-12-16 11:00:20:020
+[31m[1merror[22m[39m: URL extraction failed {"error":{"code":503,"message":"The model is overloaded. Please try again later.","status":"UNAVAILABLE"}} 2025-12-16 11:02:59:259
+[31m[1merror[22m[39m: URL extraction failed {"error":{"code":503,"message":"The model is overloaded. Please try again later.","status":"UNAVAILABLE"}} 2025-12-16 11:07:24:724
+[31m[1merror[22m[39m: URL extraction failed {"error":{"code":503,"message":"The model is overloaded. Please try again later.","status":"UNAVAILABLE"}} 2025-12-16 11:18:46:1846
+[31m[1merror[22m[39m: No matching document found for id "6944699c9f0fa326088e0748" version 1 modifiedPaths "items, items.0, items.0.quantity" 2025-12-18 22:01:08:18
+[31m[1merror[22m[39m: secretOrPrivateKey must have a value 2025-12-19 11:11:35:1135
+[31m[1merror[22m[39m: secretOrPrivateKey must have a value 2025-12-19 11:11:46:1146
+[31m[1merror[22m[39m: secretOrPrivateKey must have a value 2025-12-19 11:13:35:1335
+[31m[1merror[22m[39m: secretOrPrivateKey must have a value 2025-12-19 11:18:41:1841
+[31m[1merror[22m[39m: Order validation failed: userId: Path `userId` is required. 2025-12-21 01:53:20:5320
+[31m[1merror[22m[39m: Order validation failed: userId: Path `userId` is required. 2025-12-21 01:57:16:5716
+[31m[1merror[22m[39m: Order validation failed: userId: Path `userId` is required. 2025-12-21 01:59:49:5949
+[31m[1merror[22m[39m: Order validation failed: userId: Path `userId` is required. 2025-12-21 02:04:58:458
+[31m[1merror[22m[39m: Order validation failed: userId: Path `userId` is required. 2025-12-21 02:06:09:69
+[31m[1merror[22m[39m: Request failed with status code 400 2025-12-21 09:23:45:2345
+[31m[1merror[22m[39m: Cart not found 2025-12-21 14:59:14:5914
+[31m[1merror[22m[39m: Cart not found 2025-12-21 14:59:16:5916
+[31m[1merror[22m[39m: Cart not found 2025-12-21 14:59:17:5917
+[31m[1merror[22m[39m: Error sending confirmation email to gabbysoft2002@gmail.com: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-4324eaa08efsm16762694f8f.29 - gsmtp 2025-12-21 15:01:23:123
+[31m[1merror[22m[39m: Error sending confirmation email to gabbysoft2002@gmail.com: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-4324ea82feasm16638807f8f.24 - gsmtp 2025-12-21 15:34:46:3446
+[31m[1merror[22m[39m: Error sending confirmation email to gabbysoft2002@gmail.com: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-4324eab2721sm16770256f8f.39 - gsmtp 2025-12-21 15:50:53:5053
+[31m[1merror[22m[39m: Error sending confirmation email to gabbysoft2002@gmail.com: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-4324ea830f3sm16714352f8f.22 - gsmtp 2025-12-21 16:04:50:450
+[31m[1merror[22m[39m: Redis Error: read ECONNRESET 2025-12-21 18:05:15:515
+[31m[1merror[22m[39m: Order not found for this reference 2025-12-22 15:04:25:425
+[31m[1merror[22m[39m: Error sending confirmation email to gabbysoft2002@gmail.com: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-4324eab33f5sm22622555f8f.41 - gsmtp 2025-12-22 15:06:10:610
+[31m[1merror[22m[39m: Cast to ObjectId failed for value "5F0B76CD" (type string) at path "_id" for model "Shipment" 2025-12-23 10:20:34:2034
+[31m[1merror[22m[39m: Cast to ObjectId failed for value "5F0B76CD" (type string) at path "_id" for model "Shipment" 2025-12-23 10:20:34:2034
+[31m[1merror[22m[39m: Cast to ObjectId failed for value "YU34692" (type string) at path "_id" for model "Order" 2025-12-23 11:29:38:2938
+[31m[1merror[22m[39m: Cast to ObjectId failed for value "YU34692" (type string) at path "_id" for model "Order" 2025-12-23 11:51:26:5126
+[31m[1merror[22m[39m: Cast to ObjectId failed for value "YU34692" (type string) at path "_id" for model "Order" 2025-12-23 11:51:34:5134
+[31m[1merror[22m[39m: Cast to ObjectId failed for value "YU34692" (type string) at path "_id" for model "Order" 2025-12-23 11:51:35:5135
+[31m[1merror[22m[39m: Cast to ObjectId failed for value "YU34692" (type string) at path "_id" for model "Order" 2025-12-23 11:52:49:5249
+[31m[1merror[22m[39m: Cast to ObjectId failed for value "YU34692" (type string) at path "_id" for model "Order" 2025-12-23 11:52:51:5251
+[31m[1merror[22m[39m: Error sending confirmation email to gabbysoft2002@gmail.com: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47be27b28a7sm296738815e9.12 - gsmtp 2025-12-23 13:32:19:3219
+[31m[1merror[22m[39m: Error sending confirmation email to gabbysoft2002@gmail.com: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-4324ea1af2bsm27758330f8f.1 - gsmtp 2025-12-23 14:14:21:1421
+[31m[1merror[22m[39m: Incorrect email or password 2025-12-24 17:53:03:533
+[31m[1merror[22m[39m: Cannot read properties of undefined (reading 'constructor') 2025-12-24 18:11:21:1121
+[31m[1merror[22m[39m: undefined 2025-12-24 18:15:43:1543
+[31m[1merror[22m[39m: Cannot read properties of undefined (reading 'constructor') 2025-12-24 18:15:43:1543
+[31m[1merror[22m[39m: Cannot read properties of undefined (reading 'constructor') 2025-12-24 18:29:05:295
+[31m[1merror[22m[39m: Cannot read properties of undefined (reading 'constructor') 2025-12-24 18:40:20:4020
+[31m[1merror[22m[39m: Current and new password are required 2025-12-24 18:45:28:4528
+[31m[1merror[22m[39m: "StreetAddress" is required 2025-12-24 19:02:05:25
+[31m[1merror[22m[39m: Login failed: Error verifying password 2026-01-03 01:53:28:5328
+[31m[1merror[22m[39m: Login failed: Error verifying password 2026-01-03 01:53:43:5343
+[31m[1merror[22m[39m: Reset password failed: Cannot read properties of undefined (reading 'toLowerCase') 2026-01-03 02:10:23:1023
+[31m[1merror[22m[39m: Reset password failed: Cannot read properties of undefined (reading 'toLowerCase') 2026-01-04 11:50:34:5034
+[31m[1merror[22m[39m: "StreetAddress" is required 2026-01-06 00:41:18:4118
+[31m[1merror[22m[39m: Paystack Error: Invalid Amount Sent 2026-01-06 02:13:15:1315
+[31m[1merror[22m[39m: Payment initialization failed 2026-01-06 02:13:15:1315
+[31m[1merror[22m[39m: Error sending confirmation email to gabbysoft2002@gmail.com: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47d7fad5f7asm6254095e9.2 - gsmtp 2026-01-06 02:42:27:4227

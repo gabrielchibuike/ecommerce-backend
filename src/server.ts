@@ -8,10 +8,11 @@ import { verifyRefreshToken } from "./middleware/refreshToken";
 import cookieParser from "cookie-parser";
 import { verifyToken } from "./middleware/verifyJwt";
 import helmet from "helmet";
-import { logger } from "./utils/logger";
 import { RateLimiterRedis } from "rate-limiter-flexible";
 import redisClient from "./redisClient";
 import { errorHandler } from "./middleware/errorHandler";
+import logger from "./config/logger";
+import { createProductFromUrl } from "./controllers/aiProductController";
 
 dotenv.config();
 
@@ -27,8 +28,8 @@ mongoose
 
 app.use(helmet());
 app.use(express.urlencoded({ extended: true }));
-app.use(cookieParser());
 app.use(express.json());
+app.use(cookieParser());
 app.use(
   cors({
     origin: "http://localhost:3000",
@@ -70,7 +71,9 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 
 app.use("/api", allRoutes);
 
-app.post("/api/refreshToken", verifyRefreshToken);
+app.post("/api/createProductFromUrl", createProductFromUrl);
+
+app.get("/api/refreshToken", verifyRefreshToken);
 
 app.use(errorHandler);
 

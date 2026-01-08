@@ -7,7 +7,7 @@ export async function verifyRefreshToken(req: Request, res: Response) {
 
   const refreshToken = req.cookies.refreshToken;
 
-  console.log(refreshToken);
+  console.log(refreshToken, "refreshToken");
 
   if (!refreshToken)
     return res.status(403).json({ message: "Refresh token not found" });

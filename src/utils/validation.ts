@@ -26,13 +26,11 @@ export const createAccSchema: Joi.ObjectSchema<CreateAccSchema> = Joi.object({
     }),
 
   password: passwordComplexity({
-    min: 6,
-    max: 20,
+    min: 8,
+    max: 128,
     lowerCase: 1,
-    upperCase: 1,
     numeric: 1,
-    symbol: 1,
-    requirementCount: 6,
+    requirementCount: 2,
   }),
   // password: Joi.string()
   //   .min(8)
@@ -45,13 +43,11 @@ export const createAccSchema: Joi.ObjectSchema<CreateAccSchema> = Joi.object({
 export const loginSchema = Joi.object({
   email: Joi.string().email({ tlds: { allow: ["com", "net"] } }),
   password: passwordComplexity({
-    min: 6,
-    max: 20,
+    min: 8,
+    max: 128,
     lowerCase: 1,
-    upperCase: 1,
     numeric: 1,
-    symbol: 1,
-    requirementCount: 6,
+    requirementCount: 2,
   }),
 });
 
@@ -61,13 +57,11 @@ export const emailSchema = Joi.object({
 
 export const updatePasswordSchema = Joi.object({
   password: passwordComplexity({
-    min: 6,
-    max: 20,
+    min: 8,
+    max: 128,
     lowerCase: 1,
-    upperCase: 1,
     numeric: 1,
-    symbol: 1,
-    requirementCount: 6,
+    requirementCount: 2,
   }),
 });
 

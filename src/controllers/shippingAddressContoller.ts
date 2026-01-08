@@ -5,46 +5,15 @@ import {
   get_shipping_address_service,
   shipping_address_service,
 } from "../services/shippingAddressService";
-import { shippingAddressSchema } from "../utils/validation";
+import logger from "../config/logger";
 
 export async function shipping_address_controller(req: Request, res: Response) {
-  const {
-    firstName,
-    lastName,
-    phone,
-    email,
-    streetAddress,
-    additionalInfo,
-    city,
-    state,
-  } = req.body;
+  const userId = (req as any).user?.id;
   try {
-    const { error } = shippingAddressSchema.validate({
-      firstName,
-      lastName,
-      phone,
-      email,
-      streetAddress,
-      additionalInfo,
-      city,
-      state,
-    });
-    if (error)
-      return res.status(400).send(error.details.map((err) => err.message));
-    //   console.log(error.details.map((err) => err.message));
-    const result = await shipping_address_service({
-      firstName,
-      lastName,
-      phone,
-      email,
-      streetAddress,
-      additionalInfo,
-      city,
-      state,
-    });
-    res.status(200).json({ data: result, message: "Created Sucessfully" });
+    const result = await shipping_address_service({ ...req.body, userId });
+    res.status(200).json({ data: result, message: "Created Successfully" });
   } catch (err: any) {
-    console.log(err);
+    logger.error(err);
     res.status(500).json({ error: err.message });
   }
 }
@@ -53,12 +22,12 @@ export async function get_shipping_address_controller(
   req: Request,
   res: Response
 ) {
-  const { userId } = req.params;
+  const userId = (req as any).user?.id;
   try {
     const result = await get_shipping_address_service(userId as string);
     res.status(200).send(result);
   } catch (err: any) {
-    console.log(err);
+    logger.error(err);
     res.status(500).json({ error: err.message });
   }
 }
@@ -68,31 +37,16 @@ export async function edit_shipping_address_controller(
   res: Response
 ) {
   const { shippingAddressId } = req.params;
-  const {
-    firstName,
-    lastName,
-    phone,
-    email,
-    streetAddress,
-    additionalInfo,
-    city,
-    state,
-  } = req.body;
+  const userId = (req as any).user?.id;
   try {
     const result = await edit_shipping_address_service({
+      ...req.body,
       shippingAddressId,
-      firstName,
-      lastName,
-      phone,
-      email,
-      streetAddress,
-      additionalInfo,
-      city,
-      state,
+      userId,
     });
     res.status(200).send(result);
   } catch (err: any) {
-    console.log(err);
+    logger.error(err);
     res.status(500).json({ error: err.message });
   }
 }
@@ -101,12 +55,16 @@ export async function delete_shipping_address_controller(
   req: Request,
   res: Response
 ) {
-  const { shippingAddressId } = req.body;
+  const { shippingAddressId } = req.params; // Changed from body to params for REST consistency
+  const userId = (req as any).user?.id;
   try {
-    await delete_shipping_address_service(shippingAddressId as string);
-
-    res.status(200).send("Product deleted");
+    await delete_shipping_address_service(
+      shippingAddressId as string,
+      userId as string
+    );
+    res.status(200).send("Shipping address deleted");
   } catch (err: any) {
+    logger.error(err);
     res.status(500).json({ error: err.message });
   }
 }

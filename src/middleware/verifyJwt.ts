@@ -1,8 +1,14 @@
 import express, { Request, Response, NextFunction } from "express";
 import jwt, { JsonWebTokenError } from "jsonwebtoken";
 
+interface UserToken {
+  id: string;
+  email: string;
+  role: string;
+}
+
 interface newRequest extends Request {
-  user?: string | {};
+  user?: UserToken;
 }
 
 export async function verifyToken(
@@ -11,17 +17,24 @@ export async function verifyToken(
   next: NextFunction
 ) {
   try {
-    const authHeader = req.headers["x-auth-token"];
+    const authHeader =
+      req.headers["x-auth-token"] || req.headers["authorization"];
 
     if (!authHeader) return res.status(401).send("Access Denied!!");
 
-    const token = jwt.verify(
-      authHeader as unknown as string,
-      process.env.ACCESS_TOKEN_PRIVATE_KEY!
-    );
+    let tokenString = (authHeader as string) || "";
+    if (tokenString.startsWith("SFX_Bearer_")) {
+      tokenString = tokenString.split("SFX_Bearer_")[1] as string;
+    } else if (tokenString.startsWith("Bearer ")) {
+      tokenString = tokenString.split("Bearer ")[1] as string;
+    }
 
-    // @ts-ignore
-    req.user = token.role;
+    const token = jwt.verify(
+      tokenString,
+      process.env.ACCESS_TOKEN_PRIVATE_KEY || "access_secret"
+    ) as UserToken;
+
+    req.user = token;
 
     next();
   } catch (err) {
@@ -38,8 +51,7 @@ export const authorizePermission =
   (...roles: string[]) =>
   (req: newRequest, res: Response, next: NextFunction) => {
     try {
-      // @ts-ignore
-      if (!roles.includes(req.user)) {
+      if (!roles.includes(req.user?.role as string)) {
         return res.status(403).json({ error: "Access denied" });
       }
       next();

@@ -18,18 +18,35 @@ const orderSchema = new mongoose.Schema(
         price: { type: Number, required: true },
       },
     ],
-    shippingAddress: [
-      {
-        street: { type: String, required: true },
-        city: { type: String, required: true },
-        state: { type: String, required: true },
-        postalCode: { type: String, required: true },
-        country: { type: String, required: true },
-      },
-    ],
+    billingDetails: {
+      firstName: { type: String, required: true },
+      lastName: { type: String, required: true },
+      email: { type: String, required: true },
+      phone: { type: String, required: true },
+      streetAddress: { type: String, required: true },
+      city: { type: String, required: true },
+      state: { type: String, required: true },
+      country: { type: String, required: true },
+      zipCode: { type: String, required: true },
+      companyName: { type: String },
+    },
+    shippingAddress: {
+      firstName: { type: String, required: true },
+      lastName: { type: String, required: true },
+      phone: { type: String, required: true },
+      streetAddress: { type: String, required: true },
+      city: { type: String, required: true },
+      state: { type: String, required: true },
+      country: { type: String, required: true },
+      zipCode: { type: String, required: true },
+    },
     paymentStatus: {
       type: String,
       enum: ["Pending", "Paid", "Failed"],
+      default: "Pending",
+    },
+    paymentReference: {
+      type: String,
     },
     transactionId: {
       type: mongoose.Schema.Types.ObjectId,
@@ -37,10 +54,22 @@ const orderSchema = new mongoose.Schema(
     },
     status: {
       type: String,
-      enum: ["Pending", "Processing", "Shipped", "Delivered", "Cancelled"],
+      enum: [
+        "Pending",
+        "Processing",
+        "Shipped",
+        "Delivered",
+        "Completed",
+        "Delivery Failed",
+        "Returned",
+        "Cancelled",
+      ],
       default: "Pending",
     },
     totalPrices: { type: Number, required: true },
+    isPostProcessed: { type: Boolean, default: false },
+    invoiceNumber: { type: String },
+    invoiceReference: { type: String },
   },
   { timestamps: true }
 );

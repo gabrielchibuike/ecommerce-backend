@@ -3,14 +3,16 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.updateSchema = exports.emailSchema = exports.loginSchema = exports.createAccSchema = void 0;
+exports.shippingAddressSchema = exports.updatePasswordSchema = exports.emailSchema = exports.loginSchema = exports.createAccSchema = void 0;
 const joi_1 = __importDefault(require("joi"));
 const joi_password_complexity_1 = __importDefault(require("joi-password-complexity"));
 exports.createAccSchema = joi_1.default.object({
-    fullName: joi_1.default.string().required().trim().messages({
+    firstName: joi_1.default.string().required().trim().messages({
         "string.empty": "This field is required",
     }),
-    mobileNumber: joi_1.default.string().min(11).max(11).required(),
+    lastName: joi_1.default.string().required().trim().messages({
+        "string.empty": "This field is required",
+    }),
     email: joi_1.default.string()
         .email({ tlds: { allow: ["com", "net"] } })
         .messages({
@@ -48,7 +50,7 @@ exports.loginSchema = joi_1.default.object({
 exports.emailSchema = joi_1.default.object({
     email: joi_1.default.string().email({ tlds: { allow: ["com", "net"] } }),
 });
-exports.updateSchema = joi_1.default.object({
+exports.updatePasswordSchema = joi_1.default.object({
     password: (0, joi_password_complexity_1.default)({
         min: 6,
         max: 20,
@@ -58,7 +60,23 @@ exports.updateSchema = joi_1.default.object({
         symbol: 1,
         requirementCount: 6,
     }),
-    Cpassword: joi_1.default.string().valid(joi_1.default.ref("password")).required().messages({
-        "any.only": "Retyped password must match the password",
+});
+exports.shippingAddressSchema = joi_1.default.object({
+    firstName: joi_1.default.string().required().trim().messages({
+        "string.empty": "This field is required",
     }),
+    lastName: joi_1.default.string().required().trim().messages({
+        "string.empty": "This field is required",
+    }),
+    phone: joi_1.default.string().min(11).max(11).required(),
+    email: joi_1.default.string()
+        .email({ tlds: { allow: ["com", "net"] } })
+        .messages({
+        "string.empty": "This field is required",
+        "string.email": "email must be a valid email",
+    }),
+    StreetAddress: joi_1.default.string().required(),
+    additionalInfo: joi_1.default.string().optional(),
+    city: joi_1.default.string().required(),
+    state: joi_1.default.string().required(),
 });

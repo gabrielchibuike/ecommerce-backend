@@ -10,6 +10,11 @@ const shippingAddressSchema = new mongoose.Schema(
     additionalInfo: { type: String, require: true },
     city: { type: String, require: true },
     state: { type: String, require: true },
+    userId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+    },
   },
   { timestamps: true }
 );

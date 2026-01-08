@@ -8,7 +8,7 @@ import {
 
 const savedItemRoute = express.Router();
 
-savedItemRoute.post("/saveItem", saveItem_controller);
+savedItemRoute.post("/addItem", saveItem_controller);
 
 savedItemRoute.get("/getItem/:userId", readSavedItem_controller);
 

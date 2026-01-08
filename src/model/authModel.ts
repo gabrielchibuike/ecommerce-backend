@@ -7,6 +7,8 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
     unique: true,
+    lowercase: true,
+    trim: true,
   },
   password: {
     type: String,
@@ -14,6 +16,8 @@ const userSchema = new mongoose.Schema({
   },
   profileImg: { type: String },
   role: { type: String, enum: ["user", "admin"], default: "user" },
+  failedLoginAttempts: { type: Number, default: 0 },
+  lockUntil: { type: Date },
   savedItem: {
     type: [
       {
@@ -37,8 +41,10 @@ const userSchema = new mongoose.Schema({
   ],
   refreshToken: { type: String },
   otp: { type: String },
-  dateCreated: { type: Date, default: Date.now() },
-  dateUpdated: { type: Date, default: Date.now() },
+  otpExpiry: { type: Date },
+  otpAttempts: { type: Number, default: 0 },
+  dateCreated: { type: Date, default: Date.now },
+  dateUpdated: { type: Date, default: Date.now },
   visible: { type: Boolean, default: true },
 });
 

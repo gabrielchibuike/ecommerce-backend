@@ -7,7 +7,7 @@ import {
   get_product_controller,
   getByCategory_controller,
   getOne_product_controller,
-  search_product_controller,
+  // search_product_controller,
 } from "../controllers/productsController";
 import { authorizePermission, verifyToken } from "../middleware/verifyJwt";
 // import { upload } from "../config/multer.config";
@@ -29,17 +29,17 @@ productRoute.get(
   featuerd_product_controller
 );
 
-productRoute.get(
-  "/search",
-  verifyToken,
-  // authorizePermission("admin", "user"),
-  search_product_controller
-);
+// productRoute.get(
+//   "/search",
+//   verifyToken,
+//   // authorizePermission("admin", "user"),
+//   search_product_controller
+// );
 
 productRoute.get(
   "/get_products",
-  verifyToken,
-  cacheMiddleware,
+  // verifyToken,
+  // cacheMiddleware,
   // authorizePermission("admin", "user"),
   get_product_controller
 );

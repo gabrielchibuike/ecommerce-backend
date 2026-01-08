@@ -36,3 +36,7 @@ export async function removeSavedItem_service(
   );
   return savedItem;
 }
+export async function deleteSavedItemDocumentService(userId: string) {
+  const result = await SavedItem.deleteOne({ userId });
+  return result;
+}

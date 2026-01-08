@@ -10,25 +10,24 @@ async function generateOTP() {
   }
   return otp;
 }
-export async function generateOtpEmail(res: Response, email: string) {
-  const otp = await generateOTP();
 
-  const currentTime = new Date();
-  currentTime.getTime();
-  const result = await userDetails.findOneAndUpdate(
-    { email: email },
-    { otp: otp },
-    { new: true }
-  );
-
-  if (!result) {
-    throw new Error("Fail to save to DB");
-  }
-
-  console.log(otp);
-
-  return otp;
-
+export async function generateOtpEmail(
+  res: Response,
+  email: string,
+  rawOtp: string
+) {
+  // const otp = await generateOTP();
+  // const currentTime = new Date();
+  // currentTime.getTime();
+  // const result = await userDetails.findOneAndUpdate(
+  //   { email: email },
+  //   { otp: rawOtp },
+  //   { new: true }
+  // );
+  // if (!result) {
+  //   throw new Error("Fail to save to DB");
+  // }
+  // return otp;
   //   const transporter = nodemailer.createTransport({
   //     service: "gmail", // or use 'smtp.example.com'
   //     auth: {
@@ -36,7 +35,6 @@ export async function generateOtpEmail(res: Response, email: string) {
   //       pass: "your_app_password", // Use app password, NOT your actual password
   //     },
   //   });
-
   //   const mailOptions = {
   //     from: "Blooms clothing",
   //     to: email,
@@ -52,7 +50,6 @@ export async function generateOtpEmail(res: Response, email: string) {
   //       </div>
   //     `,
   //   };
-
   //   try {
   //     const info = await transporter.sendMail(mailOptions);
   //     console.log("OTP email sent:", info.response);

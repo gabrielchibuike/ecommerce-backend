@@ -1,24 +1,36 @@
 import mongoose from "mongoose";
 
-const ProductSchema = new mongoose.Schema({
-  main_category: { type: String, require: true },
-  product_category: { type: String, require: true },
-  sub_category: { type: String, require: true },
-  product_name: { type: String, require: true },
-  manufacturer_brand: { type: String, require: true },
-  description: { type: String },
-  color: { type: [], require: true },
-  size: { type: [], require: true },
-  status: { type: String, require: true },
-  quantity: { type: String, require: true },
-  price: { type: String, require: true },
-  discount: { type: String, require: true },
-  product_image: { type: [] },
-  dateCreated: { type: Date, default: Date.now() },
-  dateUpdated: { type: Date, default: Date.now() },
-  visible: { type: Boolean, default: true },
-});
+const ProductSchema = new mongoose.Schema(
+  {
+    product_gender: {
+      type: String,
+      enum: ["Women", "Men", "Unisex"],
+      required: true,
+    },
+    product_category: { type: String, required: true },
+    sub_category: { type: String, required: true },
+    product_name: { type: String, required: true },
+    description: { type: String },
+    color: { type: [String], required: true },
+    size: { type: [String], required: true },
+    tags: { type: [String], required: true },
+    quantity: { type: Number, required: true },
+    price: { type: Number, required: true },
+    discount: { type: Number, required: true },
+    status: {
+      type: String,
+      required: true,
+      enum: ["Available", "Unavailable"],
+      default: "Available",
+    },
+    product_image: { type: [String] },
+    visible: { type: Boolean, default: true },
+    rating: { type: Number, default: 0 },
+    reviews: { type: Number, default: 0 },
+    additionalInfo: { type: String },
+  },
+  { timestamps: true }
+);
 
 const ProductDetails = mongoose.model("Products", ProductSchema);
-
 export default ProductDetails;

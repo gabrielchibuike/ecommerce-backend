@@ -1,98 +1,75 @@
 import { Request, Response } from "express";
 import {
-  add_cart_service,
-  delete_cart_service,
-  find_existing_cart_item,
-  get_cart_service,
+  addCartItemService,
+  deleteCartItemService,
+  getCartService,
+  syncCartService,
+  updateCartItemService,
 } from "../services/cartService";
+import logger from "../config/logger";
 
-export async function add_cart_controller(req: Request, res: Response) {
+export async function addCartController(req: Request, res: Response) {
   const { userId, productId, quantity } = req.body;
   try {
-    const existing_cart = await find_existing_cart_item(userId);
-
-    if (existing_cart && existing_cart!.items.length > 0) {
-      // add item in cart
-      existing_cart!.items.push({ productId, quantity });
-
-      // Save the updated document
-      await existing_cart.save();
-
-      res.status(200).send(existing_cart);
-    } else {
-      // create cart for users
-
-      const arr = [];
-
-      arr.push({ productId, quantity });
-
-      const products = await add_cart_service({
-        userId,
-        items: arr,
-      });
-      res.status(200).send(products);
-    }
+    const cart = await addCartItemService(userId, productId, quantity);
+    res.status(200).send(cart);
   } catch (err: any) {
-    console.log(err);
+    logger.error(err);
     res.status(500).json({ error: err.message });
   }
 }
 
-export async function get_cart_controller(req: Request, res: Response) {
+export async function getCartController(req: Request, res: Response) {
   const { userId } = req.params;
   try {
-    const cartItem = await get_cart_service(userId as string);
-
-    const cart = await cartItem!.populate("items.productId");
-
-    res.status(200).send(cart.items);
+    const items = await getCartService(userId as string);
+    res.status(200).json({ data: items, message: "Retrived successfully" });
   } catch (err: any) {
-    console.log(err);
+    logger.error(err);
     res.status(500).json({ error: err.message });
   }
 }
 
-export async function edit_cart_controller(req: Request, res: Response) {
+export async function updateCartController(req: Request, res: Response) {
   const { userId, itemId } = req.params;
   const { quantity } = req.body;
   try {
-    const cartItem = await get_cart_service(userId as string);
-
-    const item = cartItem!.items;
-
-    const index = item.findIndex((item) => item._id!.toString() === itemId);
-    console.log(index);
-
-    if (index !== -1) {
-      cartItem!.items[index]!.quantity =
-        quantity || cartItem!.items[index]!.quantity;
-      cartItem!.items[index]!.productId;
-    }
-    await cartItem?.save();
-    res.status(200).send(cartItem?.items);
+    const items = await updateCartItemService(
+      userId as string,
+      itemId as string,
+      quantity
+    );
+    res.status(200).send(items);
   } catch (err: any) {
-    console.log(err);
+    logger.error(err);
     res.status(500).json({ error: err.message });
   }
 }
 
-export async function delete_cart_controller(req: Request, res: Response) {
+export async function deleteCartController(req: Request, res: Response) {
   const { userId, itemId } = req.params;
   try {
-    const cartItem = await get_cart_service(userId as string);
-
-    const result = cartItem?.items.filter(
-      (item) => (item._id as unknown as string) != itemId
-    );
-
-    const item = await delete_cart_service(
+    const result = await deleteCartItemService(
       userId as string,
-      result as unknown as any
+      itemId as string
     );
-
-    res.status(200).send("item deleted");
+    res.status(200).send(result.message);
   } catch (err: any) {
-    console.log(err);
+    logger.error(err);
+    res.status(500).json({ error: err.message });
+  }
+}
+
+export async function syncCartController(req: Request, res: Response) {
+  const { userId, items } = req.body;
+  try {
+    const finalItems = await syncCartService(userId, items);
+    res.status(200).json({
+      data: finalItems,
+      message: "Cart synced successfully",
+    });
+  } catch (err: any) {
+    logger.error(err);
     res.status(500).json({ error: err.message });
   }
 }

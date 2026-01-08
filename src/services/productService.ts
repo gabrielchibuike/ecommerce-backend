@@ -1,13 +1,12 @@
 import { productsType } from "../Interface/productsType";
 import ProductDetails from "../model/productModel";
-import adminProductDetails from "../model/productModel";
 
 interface FilterOptions {
   search: any;
   main_category?: string;
-  product_category?: string;
-  sub_category?: string;
-  manufacturer_brand?: string;
+  category?: string;
+  subcategory?: string;
+  gender?: string;
   color?: string;
   size?: string;
   price_min?: number;
@@ -23,49 +22,36 @@ interface QueryOptions {
   sort_order: string;
 }
 
-export async function create_product_service({
-  product_name,
-  product_category,
-  sub_category,
-  manufacturer_brand,
-  description,
-  color,
-  size,
-  status,
-  quantity,
-  price,
-  discount,
-  product_image,
-}: productsType) {
-  const result = await ProductDetails.create({
-    product_name,
-    product_category,
-    sub_category,
-    manufacturer_brand,
-    description,
-    color,
-    size,
-    status,
-    quantity,
-    price,
-    discount,
-    product_image,
+export async function create_product_service(data: productsType) {
+  const existing = await ProductDetails.findOne({
+    product_name: data.product_name,
   });
-  console.log(result);
+  if (existing) {
+    throw new Error("Product already exists");
+  }
 
-  return result;
+  return await ProductDetails.create({
+    product_gender: data.product_gender,
+    product_category: data.product_category,
+    sub_category: data.sub_category,
+    product_name: data.product_name,
+    description: data.description,
+    color: data.color,
+    size: data.size,
+    tags: data.tags,
+    price: data.price,
+    discount: data.discount,
+    quantity: data.quantity,
+    product_image: data.product_image,
+  });
 }
 
 export async function find_existing_product(product_name: string) {
-  const isExisting = await ProductDetails.findOne({
-    product_name,
-  });
-  return isExisting;
+  return await ProductDetails.findOne({ product_name });
 }
 
 export async function featured_product_service() {
-  const result = await ProductDetails.find({}).limit(5);
-  return result;
+  return await ProductDetails.find({}).limit(5);
 }
 
 export async function get_product_service_with_filters({
@@ -75,17 +61,12 @@ export async function get_product_service_with_filters({
   sort_by,
   sort_order,
 }: QueryOptions): Promise<{ products: productsType[]; total: number }> {
-  // Build query object
   const query: any = {};
 
-  if (filters.main_category) query.main_category = filters.main_category;
-  if (filters.product_category)
-    query.product_category = filters.product_category;
-  if (filters.sub_category) query.sub_category = filters.sub_category;
-  if (filters.manufacturer_brand)
-    query.manufacturer_brand = filters.manufacturer_brand;
+  if (filters.category) query.product_category = filters.category;
+  if (filters.subcategory) query.sub_category = filters.subcategory;
+  if (filters.gender) query.product_gender = filters.gender;
 
-  // Handle color and size as arrays with case-insensitive matching
   if (filters.color) {
     const colors = Array.isArray(filters.color)
       ? filters.color
@@ -98,53 +79,46 @@ export async function get_product_service_with_filters({
     query.size = { $in: sizes.map((size) => new RegExp(`^${size}$`, "i")) };
   }
 
-  // Handle price range (convert to string for comparison)
   if (filters.price_min || filters.price_max) {
     query.price = {};
-    if (filters.price_min) query.price.$gte = filters.price_min.toString();
-    if (filters.price_max) query.price.$lte = filters.price_max.toString();
+    if (filters.price_min) query.price.$gte = filters.price_min;
+    if (filters.price_max) query.price.$lte = filters.price_max;
   }
 
-  // Handle search with validation
   if (filters.search && filters.search.trim()) {
     const searchTerm = filters.search.trim();
     query.$or = [{ product_name: { $regex: searchTerm, $options: "i" } }];
-    console.log("Applied search term:", searchTerm); // Log search term
   }
 
-  // Calculate skip for pagination
   const skip = (page - 1) * limit;
 
-  console.log(limit);
-
-  // Execute query
   const [products, total] = await Promise.all([
     ProductDetails.find(query)
       .sort({ [sort_by]: sort_order === "asc" ? 1 : -1 })
       .skip(skip)
       .limit(limit)
       .lean(),
-    ProductDetails.countDocuments(query), // Get total matching documents
+    ProductDetails.countDocuments(query),
   ]);
 
   const mappedProducts: productsType[] = products.map((product: any) => ({
-    main_category: product.main_category ?? "",
     product_name: product.product_name ?? "",
     product_category: product.product_category ?? "",
     sub_category: product.sub_category ?? "",
-    manufacturer_brand: product.manufacturer_brand ?? "",
+    product_gender: product.product_gender ?? "",
     description: product.description ?? "",
     color: product.color ?? [],
     size: product.size ?? [],
-    status: product.status ?? "",
+    tags: product.tags ?? [],
     quantity: product.quantity ?? 0,
     price: product.price ?? 0,
+    rating: product.rating ?? 0,
+    reviews: product.reviews ?? [],
     discount: product.discount ?? 0,
+    status: product.status ?? "",
     product_image: product.product_image ?? [],
-    id: product._id?.toString() ?? "",
+    _id: product._id?.toString() ?? "",
   }));
-
-  console.log(products);
 
   return { products: mappedProducts, total };
 }
@@ -154,71 +128,53 @@ export async function search_product_service(
   page: number,
   limit: number
 ) {
-  const searchResults = await ProductDetails.find({
-    product_name: { $regex: query, $options: "i" }, // Case-insensitive search
-  })
-    .skip((page - 1) * limit)
-    .limit(limit)
-    .exec();
-
-  // Count total matching documents
-  const total = await ProductDetails.countDocuments({
-    product_name: { $regex: query, $options: "i" },
-  });
-
-  return { products: searchResults, total };
+  const [products, total] = await Promise.all([
+    ProductDetails.find({ product_name: { $regex: query, $options: "i" } })
+      .skip((page - 1) * limit)
+      .limit(limit)
+      .exec(),
+    ProductDetails.countDocuments({
+      product_name: { $regex: query, $options: "i" },
+    }),
+  ]);
+  return { products, total };
 }
 
 export async function getOne_product_service(id: string) {
-  const result = await ProductDetails.findOne({ _id: id });
-  return result;
+  return await ProductDetails.findOne({ _id: id });
 }
 
 export async function getByCategory_service(slug: string) {
-  const result = await ProductDetails.find({ product_category: slug });
-  return result;
+  return await ProductDetails.find({ product_category: slug });
 }
 
-export async function edit_product_service({
-  id,
-  product_name,
-  product_category,
-  sub_category,
-  manufacturer_brand,
-  description,
-  color,
-  size,
-  status,
-  quantity,
-  price,
-  discount,
-  product_image,
-}: productsType) {
-  const result = await ProductDetails.updateOne(
-    { _id: id },
+export async function edit_product_service(
+  data: productsType & { id: string }
+) {
+  const result = await ProductDetails.findByIdAndUpdate(
+    data.id,
     {
-      product_name,
-      product_category,
-      sub_category,
-      manufacturer_brand,
-      description,
-      color,
-      size,
-      status,
-      quantity,
-      price,
-      discount,
-      product_image,
+      product_name: data.product_name,
+      product_category: data.product_category,
+      sub_category: data.sub_category,
+      product_gender: data.product_gender,
+      description: data.description,
+      color: data.color,
+      size: data.size,
+      tags: data.tags,
+      quantity: data.quantity,
+      price: data.price,
+      discount: data.discount,
+      product_image: data.product_image,
     },
     { new: true }
   );
-
+  if (!result) throw new Error("Product not found");
   return result;
 }
 
 export async function delete_product_service(productId: string) {
   const result = await ProductDetails.deleteOne({ _id: productId });
-  console.log(result);
-
+  if (result.deletedCount === 0) throw new Error("Product not found");
   return result;
 }

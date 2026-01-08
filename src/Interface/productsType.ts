@@ -3,11 +3,11 @@ export interface productsType {
   product_name: string;
   product_category: string;
   sub_category: string;
-  manufacturer_brand: string;
+  product_gender: string;
   description: string;
   color: string[];
   size: string[];
-  status: string;
+  tags: string[];
   quantity: string;
   price: string;
   discount: string;
