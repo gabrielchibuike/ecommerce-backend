@@ -32,7 +32,7 @@ app.use(
   cors({
     // origin: "https://store-frontend-sage-xi.vercel.app/",
     origin: [
-      "http://localhost:3000",
+      // "http://localhost:3000",
       "https://store-frontend-sage-xi.vercel.app/",
     ],
     credentials: true,
