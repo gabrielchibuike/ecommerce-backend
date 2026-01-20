@@ -36,7 +36,7 @@ app.use(
       "https://store-frontend-sage-xi.vercel.app/",
     ],
     credentials: true,
-  })
+  }),
 );
 app.use(express.static("src/uploads"));
 
