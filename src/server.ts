@@ -20,9 +20,7 @@ const PORT = process.env.PORT;
 
 // connetion to database
 mongoose
-  .connect(
-    process.env.MONGODB_CONNECTION || "mongodb://localhost:27017/Ecommerce"
-  )
+  .connect(process.env.MONGODB_CONNECTION || "")
   .then(() => logger.info("Connected to mongoDb"))
   .catch((err) => logger.error("mongo connection error", err));
 
@@ -32,8 +30,11 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "https://store-frontend-sage-xi.vercel.app/",
-    // origin: "http://localhost:3000",
+    // origin: "https://store-frontend-sage-xi.vercel.app/",
+    origin: [
+      "http://localhost:3000",
+      "https://store-frontend-sage-xi.vercel.app/",
+    ],
     credentials: true,
   })
 );

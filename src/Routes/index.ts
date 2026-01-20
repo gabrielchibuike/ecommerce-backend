@@ -12,6 +12,7 @@ import storeRoutes from "./storeRoutes";
 import reviewRoute from "./reviewRoute";
 import shipmentRoute from "./shipmentRoute";
 import dashboardRoute from "./dashboardRoute";
+import dealRoute from "./dealRoute";
 
 const allRoutes = express.Router();
 
@@ -34,5 +35,6 @@ allRoutes.use("/review", reviewRoute);
 allRoutes.use("/shipment", shipmentRoute);
 
 allRoutes.use("/dashboard", dashboardRoute);
+allRoutes.use("/deals", dealRoute);
 
 export default allRoutes;

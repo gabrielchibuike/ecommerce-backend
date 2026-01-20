@@ -27,7 +27,7 @@ export async function createUserController(req: Request, res: Response) {
 export async function loginController(req: Request, res: Response) {
   try {
     const { accessToken, refreshToken, accountData } = await loginService(
-      req.body
+      req.body,
     );
     return res
       .status(200)
@@ -65,7 +65,7 @@ export async function getEmailController(req: Request, res: Response) {
 
 export async function resetPasswordWithOtpController(
   req: Request,
-  res: Response
+  res: Response,
 ) {
   try {
     const { email, otp, password } = req.body;
@@ -79,7 +79,7 @@ export async function resetPasswordWithOtpController(
 
 export async function refreshAccessTokenController(
   req: Request,
-  res: Response
+  res: Response,
 ) {
   try {
     const refreshToken = req.cookies.refreshToken || req.body.refreshToken;

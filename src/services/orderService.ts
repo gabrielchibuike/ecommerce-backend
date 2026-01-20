@@ -7,6 +7,7 @@ import axios from "axios";
 import crypto from "crypto";
 import { runPostCheckoutWorkflow } from "./workflowService";
 import userDetails from "../model/authModel";
+import DealModel from "../model/dealModel";
 
 export async function create_checkout_order_service(data: {
   userId: string;
@@ -18,6 +19,8 @@ export async function create_checkout_order_service(data: {
   let totalAmount = 0;
   const verifiedItems = [];
 
+  const now = new Date();
+
   // 1. Recalculate prices and check stock
   for (const item of data.items) {
     const product = await ProductDetails.findById(item.productId);
@@ -26,7 +29,24 @@ export async function create_checkout_order_service(data: {
       throw new Error(`Insufficient stock for ${product.product_name}`);
     }
 
-    const price = product.price; // Use price from DB
+    let price = product.price; // Use price from DB
+
+    // Check for active deals
+    const activeDeal = await DealModel.findOne({
+      productId: item.productId,
+      startAt: { $lte: now },
+      endAt: { $gte: now },
+      isActive: true,
+    });
+
+    if (activeDeal) {
+      if (activeDeal.discountType === "PERCENT") {
+        price = product.price * (1 - activeDeal.discountValue / 100);
+      } else if (activeDeal.discountType === "FLAT") {
+        price = Math.max(0, product.price - activeDeal.discountValue);
+      }
+    }
+
     totalAmount += price * item.quantity;
     verifiedItems.push({
       productId: item.productId,

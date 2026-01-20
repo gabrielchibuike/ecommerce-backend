@@ -10965,3 +10965,978 @@
 [36minfo[39m: Request body, [object Object]   2026-01-06 21:37:47:3747
 [36minfo[39m: Recieved GET request to /api//store/getStoreConfig  2026-01-06 21:37:47:3747
 [36minfo[39m: Request body, [object Object]   2026-01-06 21:37:47:3747
+[36minfo[39m: Server is running on port:  5000 2026-01-10 22:30:12:3012
+[36minfo[39m: Connected to Redis 2026-01-10 22:30:13:3013
+[36minfo[39m: Connected to mongoDb 2026-01-10 22:30:13:3013
+[36minfo[39m: Server is running on port:  5000 2026-01-10 22:32:24:3224
+[36minfo[39m: Connected to Redis 2026-01-10 22:32:24:3224
+[36minfo[39m: Connected to mongoDb 2026-01-10 22:32:24:3224
+[36minfo[39m: Recieved POST request to /api/auth/login  2026-01-10 22:32:45:3245
+[36minfo[39m: Request body, [object Object]   2026-01-10 22:32:45:3245
+[36minfo[39m: Login successful: gabbysoft2002@gmail.com 2026-01-10 22:32:46:3246
+[36minfo[39m: Recieved POST request to /api//cart/sync  2026-01-10 22:32:46:3246
+[36minfo[39m: Request body, [object Object]   2026-01-10 22:32:46:3246
+[36minfo[39m: Recieved GET request to /api//saveItem/getItem/694187ce41dedabb8f42beef  2026-01-10 22:32:47:3247
+[36minfo[39m: Request body, [object Object]   2026-01-10 22:32:47:3247
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-10 22:32:50:3250
+[36minfo[39m: Request body, [object Object]   2026-01-10 22:32:50:3250
+[36minfo[39m: Recieved GET request to /api/dashboard/top-selling?range=week  2026-01-10 22:32:50:3250
+[36minfo[39m: Request body, [object Object]   2026-01-10 22:32:50:3250
+[36minfo[39m: Recieved GET request to /api//product/get_products?page=1&limit=12  2026-01-10 22:33:08:338
+[36minfo[39m: Request body, [object Object]   2026-01-10 22:33:08:338
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-10 22:33:09:339
+[36minfo[39m: Request body, [object Object]   2026-01-10 22:33:09:339
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-10 22:35:22:3522
+[36minfo[39m: Request body, [object Object]   2026-01-10 22:35:22:3522
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-10 22:38:05:385
+[36minfo[39m: Request body, [object Object]   2026-01-10 22:38:06:386
+[36minfo[39m: Recieved GET request to /api//product/get_products?page=1&limit=12  2026-01-10 22:38:12:3812
+[36minfo[39m: Request body, [object Object]   2026-01-10 22:38:12:3812
+[36minfo[39m: Recieved GET request to /api//cart/getItem/694187ce41dedabb8f42beef  2026-01-10 22:38:21:3821
+[36minfo[39m: Request body, [object Object]   2026-01-10 22:38:21:3821
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-10 22:38:21:3821
+[36minfo[39m: Request body, [object Object]   2026-01-10 22:38:21:3821
+[36minfo[39m: Recieved GET request to /api//saveItem/getItem/694187ce41dedabb8f42beef  2026-01-10 22:38:21:3821
+[36minfo[39m: Request body, [object Object]   2026-01-10 22:38:21:3821
+[36minfo[39m: Server is running on port:  5000 2026-01-10 22:41:24:4124
+[36minfo[39m: Connected to Redis 2026-01-10 22:41:24:4124
+[36minfo[39m: Connected to mongoDb 2026-01-10 22:41:29:4129
+[36minfo[39m: Server is running on port:  5000 2026-01-10 22:42:46:4246
+[36minfo[39m: Connected to Redis 2026-01-10 22:42:46:4246
+[36minfo[39m: Connected to mongoDb 2026-01-10 22:42:53:4253
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-10 22:43:03:433
+[36minfo[39m: Request body, [object Object]   2026-01-10 22:43:03:433
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-10 22:43:10:4310
+[36minfo[39m: Request body, [object Object]   2026-01-10 22:43:10:4310
+[36minfo[39m: Recieved GET request to /api//product/get_products?page=1&limit=12  2026-01-10 22:43:14:4314
+[36minfo[39m: Request body, [object Object]   2026-01-10 22:43:14:4314
+[36minfo[39m: Recieved GET request to /api//cart/getItem/694187ce41dedabb8f42beef  2026-01-10 22:43:17:4317
+[36minfo[39m: Request body, [object Object]   2026-01-10 22:43:17:4317
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-10 22:43:17:4317
+[36minfo[39m: Request body, [object Object]   2026-01-10 22:43:17:4317
+[36minfo[39m: Recieved GET request to /api//saveItem/getItem/694187ce41dedabb8f42beef  2026-01-10 22:43:17:4317
+[36minfo[39m: Request body, [object Object]   2026-01-10 22:43:17:4317
+[36minfo[39m: Recieved GET request to /api//product/get_products?page=1&limit=12  2026-01-10 22:43:49:4349
+[36minfo[39m: Request body, [object Object]   2026-01-10 22:43:49:4349
+[36minfo[39m: Recieved GET request to /api//cart/getItem/694187ce41dedabb8f42beef  2026-01-10 22:43:52:4352
+[36minfo[39m: Request body, [object Object]   2026-01-10 22:43:52:4352
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-10 22:43:52:4352
+[36minfo[39m: Request body, [object Object]   2026-01-10 22:43:53:4353
+[36minfo[39m: Recieved GET request to /api//saveItem/getItem/694187ce41dedabb8f42beef  2026-01-10 22:43:53:4353
+[36minfo[39m: Request body, [object Object]   2026-01-10 22:43:53:4353
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-10 23:09:11:911
+[36minfo[39m: Request body, [object Object]   2026-01-10 23:09:11:911
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-10 23:12:04:124
+[36minfo[39m: Request body, [object Object]   2026-01-10 23:12:04:124
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-10 23:12:49:1249
+[36minfo[39m: Request body, [object Object]   2026-01-10 23:12:49:1249
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-11 22:47:33:4733
+[36minfo[39m: Request body, [object Object]   2026-01-11 22:47:33:4733
+[36minfo[39m: Recieved GET request to /api//product/get_product/69625f46f0a31ecc2c2a5b0a  2026-01-11 22:47:59:4759
+[36minfo[39m: Request body, [object Object]   2026-01-11 22:47:59:4759
+[36minfo[39m: Recieved GET request to /api//product/get_products/Women's%20Shoes  2026-01-11 22:48:00:480
+[36minfo[39m: Request body, [object Object]   2026-01-11 22:48:00:480
+[36minfo[39m: Recieved GET request to /api//product/get_product/69625f46f0a31ecc2c2a5b0a  2026-01-11 22:48:01:481
+[36minfo[39m: Request body, [object Object]   2026-01-11 22:48:01:481
+[36minfo[39m: Recieved GET request to /api//product/get_products/Women's%20Shoes  2026-01-11 22:48:02:482
+[36minfo[39m: Request body, [object Object]   2026-01-11 22:48:02:482
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-11 22:48:04:484
+[36minfo[39m: Request body, [object Object]   2026-01-11 22:48:04:484
+[36minfo[39m: Server is running on port:  5000 2026-01-11 22:53:16:5316
+[36minfo[39m: Connected to Redis 2026-01-11 22:53:16:5316
+[36minfo[39m: Connected to mongoDb 2026-01-11 22:53:21:5321
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-11 22:54:26:5426
+[36minfo[39m: Request body, [object Object]   2026-01-11 22:54:26:5426
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-11 22:54:29:5429
+[36minfo[39m: Request body, [object Object]   2026-01-11 22:54:29:5429
+[36minfo[39m: Recieved GET request to /api//product/get_products?page=1&limit=12  2026-01-11 22:54:38:5438
+[36minfo[39m: Request body, [object Object]   2026-01-11 22:54:38:5438
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-11 22:54:50:5450
+[36minfo[39m: Request body, [object Object]   2026-01-11 22:54:50:5450
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-11 22:54:50:5450
+[36minfo[39m: Request body, [object Object]   2026-01-11 22:54:51:5451
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-11 22:54:52:5452
+[36minfo[39m: Request body, [object Object]   2026-01-11 22:54:52:5452
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-11 22:54:53:5453
+[36minfo[39m: Request body, [object Object]   2026-01-11 22:54:53:5453
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-11 22:54:53:5453
+[36minfo[39m: Request body, [object Object]   2026-01-11 22:54:53:5453
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-11 22:54:54:5454
+[36minfo[39m: Request body, [object Object]   2026-01-11 22:54:54:5454
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-11 22:54:54:5454
+[36minfo[39m: Request body, [object Object]   2026-01-11 22:54:54:5454
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-11 22:54:54:5454
+[36minfo[39m: Request body, [object Object]   2026-01-11 22:54:54:5454
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-11 22:54:55:5455
+[36minfo[39m: Request body, [object Object]   2026-01-11 22:54:55:5455
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-11 22:54:55:5455
+[36minfo[39m: Request body, [object Object]   2026-01-11 22:54:55:5455
+[36minfo[39m: Recieved GET request to /api//product/get_products?page=2&limit=12  2026-01-11 22:54:55:5455
+[36minfo[39m: Request body, [object Object]   2026-01-11 22:54:55:5455
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-11 22:54:55:5455
+[36minfo[39m: Request body, [object Object]   2026-01-11 22:54:55:5455
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-11 22:54:56:5456
+[36minfo[39m: Request body, [object Object]   2026-01-11 22:54:56:5456
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-11 22:54:56:5456
+[36minfo[39m: Request body, [object Object]   2026-01-11 22:54:56:5456
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-11 22:54:57:5457
+[36minfo[39m: Request body, [object Object]   2026-01-11 22:54:57:5457
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-11 22:54:57:5457
+[36minfo[39m: Request body, [object Object]   2026-01-11 22:54:57:5457
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-11 22:54:58:5458
+[36minfo[39m: Request body, [object Object]   2026-01-11 22:54:58:5458
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-11 22:55:03:553
+[36minfo[39m: Request body, [object Object]   2026-01-11 22:55:03:553
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-11 22:55:04:554
+[36minfo[39m: Request body, [object Object]   2026-01-11 22:55:05:555
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-11 22:55:05:555
+[36minfo[39m: Request body, [object Object]   2026-01-11 22:55:05:555
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-11 22:55:06:556
+[36minfo[39m: Request body, [object Object]   2026-01-11 22:55:06:556
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-11 22:55:06:556
+[36minfo[39m: Request body, [object Object]   2026-01-11 22:55:06:556
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-11 22:55:06:556
+[36minfo[39m: Request body, [object Object]   2026-01-11 22:55:06:556
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-11 22:55:06:556
+[36minfo[39m: Request body, [object Object]   2026-01-11 22:55:06:556
+[36minfo[39m: Recieved POST request to /api/auth/logout  2026-01-11 22:55:07:557
+[36minfo[39m: Request body, [object Object]   2026-01-11 22:55:07:557
+[36minfo[39m: Recieved GET request to /api//product/get_products?page=3&limit=12  2026-01-11 22:55:15:5515
+[36minfo[39m: Request body, [object Object]   2026-01-11 22:55:15:5515
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-11 22:55:20:5520
+[36minfo[39m: Request body, [object Object]   2026-01-11 22:55:20:5520
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-11 22:55:20:5520
+[36minfo[39m: Request body, [object Object]   2026-01-11 22:55:20:5520
+[36minfo[39m: Recieved POST request to /api/auth/logout  2026-01-11 22:55:20:5520
+[36minfo[39m: Request body, [object Object]   2026-01-11 22:55:20:5520
+[36minfo[39m: Recieved GET request to /api//product/get_products?page=4&limit=12  2026-01-11 22:55:32:5532
+[36minfo[39m: Request body, [object Object]   2026-01-11 22:55:32:5532
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-11 22:55:37:5537
+[36minfo[39m: Request body, [object Object]   2026-01-11 22:55:37:5537
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-11 22:55:37:5537
+[36minfo[39m: Request body, [object Object]   2026-01-11 22:55:37:5537
+[36minfo[39m: Recieved POST request to /api/auth/logout  2026-01-11 22:55:37:5537
+[36minfo[39m: Request body, [object Object]   2026-01-11 22:55:37:5537
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-11 22:57:31:5731
+[36minfo[39m: Request body, [object Object]   2026-01-11 22:57:31:5731
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-11 22:58:17:5817
+[36minfo[39m: Request body, [object Object]   2026-01-11 22:58:17:5817
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-11 23:05:32:532
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:05:32:532
+[36minfo[39m: Recieved GET request to /api//product/get_product/6961b955f0a31ecc2c2a5aea  2026-01-11 23:05:55:555
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:05:55:555
+[36minfo[39m: Recieved GET request to /api//product/get_products/Men's%20Shoes  2026-01-11 23:05:55:555
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:05:55:555
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-11 23:05:59:559
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:05:59:559
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-11 23:06:39:639
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:06:39:639
+[36minfo[39m: Recieved GET request to /api//product/get_products?page=1&limit=12  2026-01-11 23:07:00:70
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:07:00:70
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-11 23:07:05:75
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:07:05:75
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-11 23:07:05:75
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:07:05:75
+[36minfo[39m: Recieved POST request to /api/auth/logout  2026-01-11 23:07:06:76
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:07:06:76
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-11 23:07:50:750
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:07:50:750
+[36minfo[39m: Recieved GET request to /api//product/get_product/69625f5cf0a31ecc2c2a5b0d  2026-01-11 23:08:01:81
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:08:01:81
+[36minfo[39m: Recieved GET request to /api//product/get_products/Women's%20Shoes  2026-01-11 23:08:01:81
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:08:01:81
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-11 23:08:03:83
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:08:03:83
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-11 23:11:28:1128
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:11:28:1128
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-11 23:12:02:122
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:12:02:122
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-11 23:12:26:1226
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:12:26:1226
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-11 23:12:36:1236
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:12:36:1236
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-11 23:12:55:1255
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:12:55:1255
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-11 23:13:07:137
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:13:07:137
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-11 23:13:24:1324
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:13:24:1324
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-11 23:13:38:1338
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:13:38:1338
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-11 23:17:23:1723
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:17:23:1723
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-11 23:21:55:2155
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:21:55:2155
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-11 23:26:54:2654
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:26:54:2654
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-11 23:27:27:2727
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:27:27:2727
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-11 23:31:49:3149
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:31:49:3149
+[36minfo[39m: Recieved GET request to /api//product/get_product/69625f5cf0a31ecc2c2a5b0d  2026-01-11 23:31:54:3154
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:31:54:3154
+[36minfo[39m: Recieved GET request to /api//product/get_product/69625f5cf0a31ecc2c2a5b0d  2026-01-11 23:32:59:3259
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:32:59:3259
+[36minfo[39m: Recieved GET request to /api//product/get_products/Women's%20Shoes  2026-01-11 23:33:00:330
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:33:00:330
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-11 23:33:03:333
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:33:03:333
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-11 23:33:04:334
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:33:04:334
+[36minfo[39m: Recieved POST request to /api/auth/logout  2026-01-11 23:33:04:334
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:33:04:334
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-11 23:35:39:3539
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:35:39:3539
+[36minfo[39m: Recieved GET request to /api//review/get/69625f5cf0a31ecc2c2a5b0d?page=1&limit=10  2026-01-11 23:36:33:3633
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:36:33:3633
+[36minfo[39m: Recieved GET request to /api//review/get/69625f5cf0a31ecc2c2a5b0d?page=1&limit=10  2026-01-11 23:36:33:3633
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:36:33:3633
+[36minfo[39m: Recieved GET request to /api//product/get_products?category=Women%27s+Shoes&page=1&limit=12  2026-01-11 23:37:32:3732
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:37:32:3732
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-11 23:37:34:3734
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:37:34:3734
+[36minfo[39m: Recieved GET request to /api//product/get_products?page=1&limit=12  2026-01-11 23:37:59:3759
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:37:59:3759
+[36minfo[39m: Recieved GET request to /api//product/get_product/69625f6cf0a31ecc2c2a5b10  2026-01-11 23:38:10:3810
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:38:10:3810
+[36minfo[39m: Recieved GET request to /api//product/get_products/Women's%20Shoes  2026-01-11 23:38:10:3810
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:38:10:3810
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-11 23:38:12:3812
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:38:12:3812
+[36minfo[39m: Recieved GET request to /api//product/get_product/69625f6cf0a31ecc2c2a5b10  2026-01-11 23:42:53:4253
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:42:53:4253
+[36minfo[39m: Recieved GET request to /api//product/get_products/Women's%20Shoes  2026-01-11 23:42:55:4255
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:42:55:4255
+[36minfo[39m: Recieved GET request to /api//product/get_product/69625f6cf0a31ecc2c2a5b10  2026-01-11 23:44:16:4416
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:44:16:4416
+[36minfo[39m: Recieved GET request to /api//product/get_products/Women's%20Shoes  2026-01-11 23:44:17:4417
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:44:17:4417
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-11 23:44:21:4421
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:44:21:4421
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-11 23:44:21:4421
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:44:21:4421
+[36minfo[39m: Recieved POST request to /api/auth/logout  2026-01-11 23:44:21:4421
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:44:21:4421
+[36minfo[39m: Recieved GET request to /api//product/get_products?page=1&limit=12  2026-01-11 23:45:52:4552
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:45:52:4552
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-11 23:45:56:4556
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:45:56:4556
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-11 23:45:56:4556
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:45:56:4556
+[36minfo[39m: Recieved POST request to /api/auth/logout  2026-01-11 23:45:56:4556
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:45:56:4556
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-11 23:48:43:4843
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:48:43:4843
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-11 23:48:54:4854
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:48:54:4854
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-11 23:49:00:490
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:49:00:490
+[36minfo[39m: Recieved GET request to /api//product/get_products?page=1&limit=12  2026-01-11 23:56:28:5628
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:56:28:5628
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-11 23:56:29:5629
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:56:29:5629
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-11 23:56:29:5629
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:56:29:5629
+[36minfo[39m: Recieved POST request to /api/auth/logout  2026-01-11 23:56:29:5629
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:56:29:5629
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-11 23:56:34:5634
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:56:34:5634
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-11 23:56:38:5638
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:56:38:5638
+[36minfo[39m: Recieved POST request to /api/auth/logout  2026-01-11 23:56:38:5638
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:56:38:5638
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-11 23:57:12:5712
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:57:12:5712
+[36minfo[39m: Recieved GET request to /api//product/get_product/69625f46f0a31ecc2c2a5b0a  2026-01-11 23:57:43:5743
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:57:43:5743
+[36minfo[39m: Recieved GET request to /api//product/get_products/Women's%20Shoes  2026-01-11 23:57:44:5744
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:57:44:5744
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-11 23:57:46:5746
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:57:46:5746
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-11 23:58:12:5812
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:58:12:5812
+[36minfo[39m: Recieved GET request to /api/dashboard/top-selling?range=week  2026-01-11 23:58:12:5812
+[36minfo[39m: Request body, [object Object]   2026-01-11 23:58:12:5812
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-12 00:03:42:342
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:03:42:342
+[36minfo[39m: Recieved GET request to /api/dashboard/top-selling?range=week  2026-01-12 00:03:42:342
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:03:42:342
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-12 00:10:38:1038
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:10:38:1038
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-12 00:10:38:1038
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:10:38:1038
+[36minfo[39m: Recieved GET request to /api/dashboard/top-selling?range=week  2026-01-12 00:10:38:1038
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:10:38:1038
+[36minfo[39m: Recieved POST request to /api/auth/logout  2026-01-12 00:10:39:1039
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:10:39:1039
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-12 00:10:48:1048
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:10:48:1048
+[36minfo[39m: Recieved GET request to /api/dashboard/top-selling?range=week  2026-01-12 00:10:48:1048
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:10:48:1048
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-12 00:10:52:1052
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:10:52:1052
+[36minfo[39m: Recieved POST request to /api/auth/logout  2026-01-12 00:10:52:1052
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:10:52:1052
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-12 00:14:13:1413
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:14:13:1413
+[36minfo[39m: Recieved GET request to /api/dashboard/top-selling?range=week  2026-01-12 00:14:13:1413
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:14:13:1413
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-12 00:16:19:1619
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:16:19:1619
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-12 00:16:48:1648
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:16:48:1648
+[36minfo[39m: Recieved POST request to /api/auth/logout  2026-01-12 00:16:48:1648
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:16:48:1648
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-12 00:17:07:177
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:17:07:177
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-12 00:17:07:177
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:17:07:177
+[36minfo[39m: Recieved POST request to /api/auth/logout  2026-01-12 00:17:07:177
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:17:07:177
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-12 00:18:48:1848
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:18:48:1848
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-12 00:20:42:2042
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:20:42:2042
+[36minfo[39m: Recieved GET request to /api/dashboard/top-selling?range=week  2026-01-12 00:20:42:2042
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:20:42:2042
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-12 00:21:55:2155
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:21:55:2155
+[36minfo[39m: Recieved GET request to /api/dashboard/top-selling?range=week  2026-01-12 00:21:55:2155
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:21:55:2155
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-12 00:22:16:2216
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:22:16:2216
+[36minfo[39m: Recieved GET request to /api/dashboard/top-selling?range=week  2026-01-12 00:22:17:2217
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:22:17:2217
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-12 00:23:51:2351
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:23:51:2351
+[36minfo[39m: Recieved GET request to /api/dashboard/top-selling?range=week  2026-01-12 00:23:51:2351
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:23:51:2351
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-12 00:24:15:2415
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:24:15:2415
+[36minfo[39m: Recieved GET request to /api/dashboard/top-selling?range=week  2026-01-12 00:24:15:2415
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:24:15:2415
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-12 00:25:32:2532
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:25:32:2532
+[36minfo[39m: Recieved GET request to /api/dashboard/top-selling?range=week  2026-01-12 00:25:32:2532
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:25:32:2532
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-12 00:26:12:2612
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:26:12:2612
+[36minfo[39m: Recieved GET request to /api/dashboard/top-selling?range=week  2026-01-12 00:26:12:2612
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:26:12:2612
+[36minfo[39m: Recieved GET request to /api//product/get_product/5  2026-01-12 00:26:14:2614
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:26:14:2614
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-12 00:26:42:2642
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:26:42:2642
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-12 00:26:42:2642
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:26:42:2642
+[36minfo[39m: Recieved POST request to /api/auth/logout  2026-01-12 00:26:42:2642
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:26:42:2642
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-12 00:26:44:2644
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:26:44:2644
+[36minfo[39m: Recieved GET request to /api/dashboard/top-selling?range=week  2026-01-12 00:26:44:2644
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:26:44:2644
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-12 00:31:33:3133
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:31:33:3133
+[36minfo[39m: Recieved GET request to /api/dashboard/top-selling?range=week  2026-01-12 00:31:33:3133
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:31:33:3133
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-12 00:31:47:3147
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:31:47:3147
+[36minfo[39m: Recieved GET request to /api/dashboard/top-selling?range=week  2026-01-12 00:31:47:3147
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:31:47:3147
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-12 00:31:47:3147
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:31:47:3147
+[36minfo[39m: Recieved POST request to /api/auth/logout  2026-01-12 00:31:48:3148
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:31:48:3148
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-12 00:32:05:325
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:32:05:325
+[36minfo[39m: Recieved GET request to /api/dashboard/top-selling?range=week  2026-01-12 00:32:05:325
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:32:05:325
+[36minfo[39m: Recieved GET request to /api/dashboard/summary  2026-01-12 00:32:18:3218
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:32:18:3218
+[36minfo[39m: Recieved GET request to /api/dashboard/sales-by-category?range=week  2026-01-12 00:32:18:3218
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:32:18:3218
+[36minfo[39m: Recieved GET request to /api/dashboard/activity-feed  2026-01-12 00:32:18:3218
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:32:18:3218
+[36minfo[39m: Recieved GET request to /api/dashboard/top-selling?range=week  2026-01-12 00:32:18:3218
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:32:18:3218
+[36minfo[39m: Recieved GET request to /api/order/admin/all?limit=7&page=1  2026-01-12 00:32:18:3218
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:32:18:3218
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-12 00:32:18:3218
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:32:18:3218
+[36minfo[39m: Recieved GET request to /api/dashboard/latest-offers  2026-01-12 00:32:18:3218
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:32:18:3218
+[36minfo[39m: Recieved GET request to /api//store/getStoreConfig  2026-01-12 00:32:18:3218
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:32:18:3218
+[36minfo[39m: Recieved POST request to /api/auth/logout  2026-01-12 00:32:18:3218
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:32:18:3218
+[36minfo[39m: Recieved GET request to /api/dashboard/summary  2026-01-12 00:36:47:3647
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:36:47:3647
+[36minfo[39m: Recieved GET request to /api/dashboard/sales-by-category?range=week  2026-01-12 00:36:47:3647
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:36:47:3647
+[36minfo[39m: Recieved GET request to /api/dashboard/activity-feed  2026-01-12 00:36:47:3647
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:36:47:3647
+[36minfo[39m: Recieved GET request to /api/dashboard/top-selling?range=week  2026-01-12 00:36:47:3647
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:36:47:3647
+[36minfo[39m: Recieved GET request to /api/dashboard/latest-offers  2026-01-12 00:36:47:3647
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:36:47:3647
+[36minfo[39m: Recieved GET request to /api/order/admin/all?limit=7&page=1  2026-01-12 00:36:47:3647
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:36:47:3647
+[36minfo[39m: Recieved GET request to /api//store/getStoreConfig  2026-01-12 00:36:48:3648
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:36:48:3648
+[36minfo[39m: Server is running on port:  5000 2026-01-12 00:57:07:577
+[36minfo[39m: Connected to Redis 2026-01-12 00:57:07:577
+[36minfo[39m: Recieved GET request to /api//store/getStoreConfig  2026-01-12 00:57:07:577
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:57:07:577
+[36minfo[39m: Recieved GET request to /api/dashboard/summary  2026-01-12 00:57:07:577
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:57:07:577
+[36minfo[39m: Recieved GET request to /api/dashboard/sales-by-category?range=week  2026-01-12 00:57:07:577
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:57:07:577
+[36minfo[39m: Recieved GET request to /api/dashboard/activity-feed  2026-01-12 00:57:07:577
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:57:07:577
+[36minfo[39m: Recieved GET request to /api/order/admin/all?limit=7&page=1  2026-01-12 00:57:07:577
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:57:07:577
+[36minfo[39m: Recieved GET request to /api/dashboard/latest-offers  2026-01-12 00:57:08:578
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:57:08:578
+[36minfo[39m: Connected to mongoDb 2026-01-12 00:57:11:5711
+[36minfo[39m: Recieved GET request to /api/dashboard/top-selling?range=week  2026-01-12 00:57:12:5712
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:57:12:5712
+[36minfo[39m: Recieved GET request to /api//deals/all  2026-01-12 00:57:23:5723
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:57:23:5723
+[36minfo[39m: Recieved GET request to /api//product/get_products?limit=100  2026-01-12 00:57:23:5723
+[36minfo[39m: Request body, [object Object]   2026-01-12 00:57:23:5723
+[36minfo[39m: Recieved GET request to /api//deals/all  2026-01-12 01:04:01:41
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:04:01:41
+[36minfo[39m: Recieved GET request to /api//product/get_products?limit=100  2026-01-12 01:04:01:41
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:04:01:41
+[36minfo[39m: Recieved GET request to /api//deals/all  2026-01-12 01:05:49:549
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:05:49:549
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-12 01:05:49:549
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:05:49:549
+[36minfo[39m: Recieved GET request to /api//product/get_products?limit=100  2026-01-12 01:05:50:550
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:05:50:550
+[36minfo[39m: Recieved GET request to /api//store/getStoreConfig  2026-01-12 01:05:50:550
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:05:50:550
+[36minfo[39m: Recieved POST request to /api/auth/logout  2026-01-12 01:05:50:550
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:05:50:550
+[36minfo[39m: Recieved GET request to /api//deals/all  2026-01-12 01:06:00:60
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:06:00:60
+[36minfo[39m: Recieved GET request to /api//product/get_products?limit=100  2026-01-12 01:06:00:60
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:06:00:60
+[36minfo[39m: Recieved GET request to /api//store/getStoreConfig  2026-01-12 01:06:00:60
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:06:00:60
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-12 01:06:00:60
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:06:00:60
+[36minfo[39m: Recieved POST request to /api/auth/logout  2026-01-12 01:06:00:60
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:06:00:60
+[36minfo[39m: Recieved GET request to /api//deals/all  2026-01-12 01:06:27:627
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:06:27:627
+[36minfo[39m: Recieved GET request to /api//product/get_products?limit=100  2026-01-12 01:06:27:627
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:06:27:627
+[36minfo[39m: Recieved GET request to /api//deals/all  2026-01-12 01:06:50:650
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:06:50:650
+[36minfo[39m: Recieved GET request to /api//product/get_products?limit=100  2026-01-12 01:06:50:650
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:06:50:650
+[36minfo[39m: Recieved GET request to /api//store/getStoreConfig  2026-01-12 01:06:50:650
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:06:50:650
+[36minfo[39m: Recieved GET request to /api//deals/all  2026-01-12 01:07:30:730
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:07:30:730
+[36minfo[39m: Recieved GET request to /api//product/get_products?limit=100  2026-01-12 01:07:30:730
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:07:30:730
+[36minfo[39m: Recieved GET request to /api//store/getStoreConfig  2026-01-12 01:07:30:730
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:07:30:730
+[36minfo[39m: Recieved GET request to /api//deals/all  2026-01-12 01:09:01:91
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:09:01:91
+[36minfo[39m: Recieved GET request to /api//product/get_products?limit=100  2026-01-12 01:09:01:91
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:09:01:91
+[36minfo[39m: Recieved GET request to /api//store/getStoreConfig  2026-01-12 01:09:01:91
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:09:01:91
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-12 01:11:25:1125
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:11:25:1125
+[36minfo[39m: Recieved GET request to /api/dashboard/top-selling?range=week  2026-01-12 01:11:25:1125
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:11:25:1125
+[36minfo[39m: Recieved GET request to /api//deals/today  2026-01-12 01:11:25:1125
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:11:25:1125
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-12 01:11:25:1125
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:11:25:1125
+[36minfo[39m: Recieved POST request to /api/auth/logout  2026-01-12 01:11:25:1125
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:11:25:1125
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-12 01:11:38:1138
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:11:38:1138
+[36minfo[39m: Recieved GET request to /api/dashboard/top-selling?range=week  2026-01-12 01:11:38:1138
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:11:38:1138
+[36minfo[39m: Recieved GET request to /api//deals/today  2026-01-12 01:11:38:1138
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:11:38:1138
+[36minfo[39m: Recieved GET request to /api//deals/all  2026-01-12 01:11:55:1155
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:11:55:1155
+[36minfo[39m: Recieved GET request to /api//product/get_products?limit=100  2026-01-12 01:11:55:1155
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:11:55:1155
+[36minfo[39m: Recieved GET request to /api//store/getStoreConfig  2026-01-12 01:11:55:1155
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:11:55:1155
+[36minfo[39m: Recieved POST request to /api//deals  2026-01-12 01:12:55:1255
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:12:55:1255
+[36minfo[39m: Recieved GET request to /api//deals/all  2026-01-12 01:12:55:1255
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:12:55:1255
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-12 01:13:09:139
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:13:09:139
+[36minfo[39m: Recieved GET request to /api/dashboard/top-selling?range=week  2026-01-12 01:13:09:139
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:13:09:139
+[36minfo[39m: Recieved GET request to /api//deals/today  2026-01-12 01:13:09:139
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:13:09:139
+[36minfo[39m: Recieved GET request to /api//deals/all  2026-01-12 01:13:40:1340
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:13:40:1340
+[36minfo[39m: Recieved GET request to /api//product/get_products?limit=100  2026-01-12 01:13:40:1340
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:13:40:1340
+[36minfo[39m: Recieved GET request to /api//store/getStoreConfig  2026-01-12 01:13:40:1340
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:13:40:1340
+[36minfo[39m: Recieved POST request to /api//deals  2026-01-12 01:14:03:143
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:14:03:143
+[36minfo[39m: Recieved GET request to /api//deals/all  2026-01-12 01:14:04:144
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:14:04:144
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-12 01:14:15:1415
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:14:15:1415
+[36minfo[39m: Recieved GET request to /api/dashboard/top-selling?range=week  2026-01-12 01:14:15:1415
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:14:15:1415
+[36minfo[39m: Recieved GET request to /api//deals/today  2026-01-12 01:14:15:1415
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:14:15:1415
+[36minfo[39m: Recieved GET request to /api//product/get_products?page=1&limit=12  2026-01-12 01:14:38:1438
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:14:38:1438
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-12 01:14:41:1441
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:14:41:1441
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-12 01:14:59:1459
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:14:59:1459
+[36minfo[39m: Recieved GET request to /api//deals/today  2026-01-12 01:14:59:1459
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:14:59:1459
+[36minfo[39m: Recieved GET request to /api/dashboard/top-selling?range=week  2026-01-12 01:14:59:1459
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:14:59:1459
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-12 01:15:51:1551
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:15:51:1551
+[36minfo[39m: Recieved GET request to /api/dashboard/top-selling?range=week  2026-01-12 01:15:51:1551
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:15:51:1551
+[36minfo[39m: Recieved GET request to /api//deals/today  2026-01-12 01:15:51:1551
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:15:51:1551
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-12 01:17:21:1721
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:17:21:1721
+[36minfo[39m: Recieved GET request to /api//deals/today  2026-01-12 01:17:22:1722
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:17:22:1722
+[36minfo[39m: Recieved GET request to /api/dashboard/top-selling?range=week  2026-01-12 01:17:22:1722
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:17:22:1722
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-12 01:17:22:1722
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:17:22:1722
+[36minfo[39m: Recieved GET request to /api//deals/today  2026-01-12 01:26:41:2641
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:26:41:2641
+[36minfo[39m: Recieved GET request to /api/dashboard/top-selling?range=week  2026-01-12 01:33:54:3354
+[36minfo[39m: Request body, [object Object]   2026-01-12 01:33:54:3354
+[36minfo[39m: Server is running on port:  5000 2026-01-12 01:38:44:3844
+[36minfo[39m: Connected to Redis 2026-01-12 01:38:44:3844
+[31m[1merror[22m[39m: mongo connection error Server selection timed out after 30000 ms 2026-01-12 01:39:29:3929
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-13 07:37:53:3753
+[36minfo[39m: Request body, [object Object]   2026-01-13 07:37:53:3753
+[36minfo[39m: Recieved GET request to /api/dashboard/top-selling?range=week  2026-01-13 07:37:53:3753
+[36minfo[39m: Request body, [object Object]   2026-01-13 07:37:53:3753
+[36minfo[39m: Recieved GET request to /api//deals/all  2026-01-13 07:37:53:3753
+[36minfo[39m: Request body, [object Object]   2026-01-13 07:37:53:3753
+[36minfo[39m: Recieved GET request to /api//store/getStoreConfig  2026-01-13 07:37:53:3753
+[36minfo[39m: Request body, [object Object]   2026-01-13 07:37:53:3753
+[36minfo[39m: Recieved GET request to /api//product/get_products?limit=100  2026-01-13 07:37:53:3753
+[36minfo[39m: Request body, [object Object]   2026-01-13 07:37:53:3753
+[31m[1merror[22m[39m: Operation `orders.aggregate()` buffering timed out after 10000ms 2026-01-13 07:38:03:383
+[31m[1merror[22m[39m: Operation `deals.find()` buffering timed out after 10000ms 2026-01-13 07:38:03:383
+[36minfo[39m: Recieved GET request to /api//deals/today  2026-01-13 07:38:18:3818
+[36minfo[39m: Request body, [object Object]   2026-01-13 07:38:18:3818
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-13 07:38:18:3818
+[36minfo[39m: Request body, [object Object]   2026-01-13 07:38:18:3818
+[36minfo[39m: Recieved GET request to /api/dashboard/top-selling?range=week  2026-01-13 07:38:18:3818
+[36minfo[39m: Request body, [object Object]   2026-01-13 07:38:18:3818
+[31m[1merror[22m[39m: Operation `orders.aggregate()` buffering timed out after 10000ms 2026-01-13 07:38:28:3828
+[31m[1merror[22m[39m: Operation `deals.find()` buffering timed out after 10000ms 2026-01-13 07:38:28:3828
+[36minfo[39m: Server is running on port:  5000 2026-01-19 23:04:02:42
+[36minfo[39m: Connected to Redis 2026-01-19 23:04:02:42
+[31m[1merror[22m[39m: mongo connection error querySrv ECONNREFUSED _mongodb._tcp.cluster0.y8t8dyn.mongodb.net 2026-01-19 23:04:02:42
+[36minfo[39m: Server is running on port:  5000 2026-01-19 23:06:40:640
+[36minfo[39m: Connected to Redis 2026-01-19 23:06:41:641
+[36minfo[39m: Connected to mongoDb 2026-01-19 23:06:50:650
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-19 23:12:57:1257
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:12:57:1257
+[36minfo[39m: Recieved GET request to /api/dashboard/top-selling?range=week  2026-01-19 23:12:57:1257
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:12:57:1257
+[36minfo[39m: Recieved GET request to /api//deals/today  2026-01-19 23:12:57:1257
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:12:57:1257
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-19 23:12:57:1257
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:12:57:1257
+[36minfo[39m: Recieved POST request to /api/auth/logout  2026-01-19 23:12:58:1258
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:12:58:1258
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-19 23:14:31:1431
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:14:31:1431
+[36minfo[39m: Recieved GET request to /api/dashboard/top-selling?range=week  2026-01-19 23:14:31:1431
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:14:31:1431
+[36minfo[39m: Recieved GET request to /api//deals/today  2026-01-19 23:14:31:1431
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:14:31:1431
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-19 23:14:52:1452
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:14:52:1452
+[36minfo[39m: Recieved GET request to /api/dashboard/top-selling?range=week  2026-01-19 23:14:52:1452
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:14:52:1452
+[36minfo[39m: Recieved GET request to /api//deals/today  2026-01-19 23:14:52:1452
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:14:53:1453
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-19 23:14:53:1453
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:14:53:1453
+[36minfo[39m: Recieved POST request to /api/auth/logout  2026-01-19 23:14:53:1453
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:14:53:1453
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-19 23:15:19:1519
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:15:19:1519
+[36minfo[39m: Recieved GET request to /api/dashboard/top-selling?range=week  2026-01-19 23:15:19:1519
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:15:19:1519
+[36minfo[39m: Recieved GET request to /api//deals/today  2026-01-19 23:15:19:1519
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:15:19:1519
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-19 23:15:19:1519
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:15:19:1519
+[36minfo[39m: Recieved POST request to /api/auth/logout  2026-01-19 23:15:19:1519
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:15:20:1520
+[36minfo[39m: Recieved GET request to /api//product/get_products?page=1&limit=12  2026-01-19 23:16:43:1643
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:16:43:1643
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-19 23:16:52:1652
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:16:52:1652
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-19 23:17:04:174
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:17:04:174
+[36minfo[39m: Recieved GET request to /api/dashboard/top-selling?range=week  2026-01-19 23:17:04:174
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:17:04:174
+[36minfo[39m: Recieved GET request to /api//deals/today  2026-01-19 23:17:04:174
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:17:04:174
+[36minfo[39m: Recieved GET request to /api//product/get_products?page=1&limit=12  2026-01-19 23:17:06:176
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:17:06:176
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-19 23:17:10:1710
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:17:11:1711
+[36minfo[39m: Recieved GET request to /api//product/get_products?page=1&limit=12&sort_by=price&sort_order=asc  2026-01-19 23:17:56:1756
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:17:56:1756
+[36minfo[39m: Recieved GET request to /api//product/get_product/69625eebf0a31ecc2c2a5af1  2026-01-19 23:18:21:1821
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:18:21:1821
+[36minfo[39m: Recieved GET request to /api//product/get_products/Women's%20Shoes  2026-01-19 23:18:22:1822
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:18:22:1822
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-19 23:18:24:1824
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:18:24:1824
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-19 23:19:12:1912
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:19:12:1912
+[36minfo[39m: Recieved GET request to /api/dashboard/top-selling?range=week  2026-01-19 23:19:12:1912
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:19:12:1912
+[36minfo[39m: Recieved GET request to /api//deals/today  2026-01-19 23:19:12:1912
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:19:12:1912
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-19 23:19:12:1912
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:19:12:1912
+[36minfo[39m: Recieved GET request to /api//product/get_product/69625f38f0a31ecc2c2a5b06  2026-01-19 23:19:18:1918
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:19:18:1918
+[36minfo[39m: Recieved GET request to /api//product/get_products/Women's%20Shoes  2026-01-19 23:19:19:1919
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:19:19:1919
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-19 23:19:22:1922
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:19:22:1922
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-19 23:20:34:2034
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:20:34:2034
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-19 23:20:34:2034
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:20:34:2034
+[36minfo[39m: Recieved GET request to /api/dashboard/top-selling?range=week  2026-01-19 23:20:34:2034
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:20:35:2035
+[36minfo[39m: Recieved GET request to /api//deals/today  2026-01-19 23:20:35:2035
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:20:35:2035
+[36minfo[39m: Recieved GET request to /api//product/get_product/69625f38f0a31ecc2c2a5b06  2026-01-19 23:20:37:2037
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:20:37:2037
+[36minfo[39m: Recieved GET request to /api//product/get_products/Women's%20Shoes  2026-01-19 23:20:38:2038
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:20:38:2038
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-19 23:20:42:2042
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:20:42:2042
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-19 23:20:43:2043
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:20:43:2043
+[36minfo[39m: Recieved POST request to /api/auth/logout  2026-01-19 23:20:43:2043
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:20:43:2043
+[36minfo[39m: Recieved GET request to /api//product/get_product/69625f38f0a31ecc2c2a5b06  2026-01-19 23:20:50:2050
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:20:50:2050
+[36minfo[39m: Recieved GET request to /api//product/get_products/Women's%20Shoes  2026-01-19 23:20:50:2050
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:20:50:2050
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-19 23:20:54:2054
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:20:54:2054
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-19 23:20:54:2054
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:20:54:2054
+[36minfo[39m: Recieved POST request to /api/auth/logout  2026-01-19 23:20:54:2054
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:20:54:2054
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-19 23:22:48:2248
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:22:48:2248
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-19 23:22:48:2248
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:22:48:2248
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-19 23:23:11:2311
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:23:11:2311
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-19 23:23:25:2325
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:23:25:2325
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-19 23:23:45:2345
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:23:45:2345
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-19 23:23:59:2359
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:23:59:2359
+[36minfo[39m: Recieved GET request to /api/order/my  2026-01-19 23:24:02:242
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:24:02:242
+[36minfo[39m: Recieved POST request to /api/auth/login  2026-01-19 23:24:06:246
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:24:06:246
+[31m[1merror[22m[39m: Login failed: Invalid email or password 2026-01-19 23:24:07:247
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-19 23:24:09:249
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:24:09:249
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-19 23:24:09:249
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:24:09:249
+[36minfo[39m: Recieved GET request to /api/order/my  2026-01-19 23:24:09:249
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:24:09:249
+[36minfo[39m: Recieved POST request to /api/auth/login  2026-01-19 23:24:21:2421
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:24:21:2421
+[31m[1merror[22m[39m: Login failed: Invalid email or password 2026-01-19 23:24:22:2422
+[36minfo[39m: Recieved POST request to /api/auth/login  2026-01-19 23:25:14:2514
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:25:14:2514
+[31m[1merror[22m[39m: Login failed: Invalid email or password 2026-01-19 23:25:15:2515
+[36minfo[39m: Recieved POST request to /api/auth/login  2026-01-19 23:25:26:2526
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:25:26:2526
+[31m[1merror[22m[39m: Login failed: Invalid email or password 2026-01-19 23:25:28:2528
+[36minfo[39m: Recieved POST request to /api/auth/login  2026-01-19 23:29:00:290
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:29:00:290
+[3m[33mwarn[39m[23m: Account locked: gabbysoft2002@gmail.com 2026-01-19 23:29:02:292
+[31m[1merror[22m[39m: Login failed: Invalid email or password 2026-01-19 23:29:02:292
+[36minfo[39m: Recieved POST request to /api/auth/forgot-password  2026-01-19 23:29:33:2933
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:29:33:2933
+[36minfo[39m: OTP requested: gabbysoft2002@gmail.com 2026-01-19 23:29:34:2934
+[36minfo[39m: OTP requested: 737171 2026-01-19 23:29:34:2934
+[36minfo[39m: Recieved POST request to /api/auth/reset-password  2026-01-19 23:32:37:3237
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:32:37:3237
+[36minfo[39m: Password reset via OTP: gabbysoft2002@gmail.com 2026-01-19 23:32:38:3238
+[36minfo[39m: Recieved POST request to /api/auth/login  2026-01-19 23:32:43:3243
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:32:43:3243
+[31m[1merror[22m[39m: Login failed: Account is temporarily locked. Please try again later. 2026-01-19 23:32:43:3243
+[36minfo[39m: Recieved POST request to /api/auth/login  2026-01-19 23:32:51:3251
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:32:51:3251
+[31m[1merror[22m[39m: Login failed: Account is temporarily locked. Please try again later. 2026-01-19 23:32:51:3251
+[36minfo[39m: Recieved POST request to /api/auth/login  2026-01-19 23:33:51:3351
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:33:51:3351
+[31m[1merror[22m[39m: Login failed: Account is temporarily locked. Please try again later. 2026-01-19 23:33:52:3352
+[36minfo[39m: Recieved GET request to /api//product/get_product/69625f38f0a31ecc2c2a5b06  2026-01-19 23:34:58:3458
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:34:58:3458
+[36minfo[39m: Recieved GET request to /api//product/get_products/Women's%20Shoes  2026-01-19 23:35:09:359
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:35:09:359
+[36minfo[39m: Recieved GET request to /api//product/get_product/69625f38f0a31ecc2c2a5b06  2026-01-19 23:35:16:3516
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:35:16:3516
+[36minfo[39m: Recieved GET request to /api//product/get_products/Women's%20Shoes  2026-01-19 23:35:17:3517
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:35:17:3517
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-19 23:36:45:3645
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:36:45:3645
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-19 23:36:47:3647
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:36:47:3647
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-19 23:36:47:3647
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:36:47:3647
+[36minfo[39m: Recieved POST request to /api/auth/logout  2026-01-19 23:36:47:3647
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:36:47:3647
+[36minfo[39m: Recieved POST request to /api/auth/logout  2026-01-19 23:36:48:3648
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:36:48:3648
+[36minfo[39m: Recieved POST request to /api/auth/login  2026-01-19 23:37:06:376
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:37:06:376
+[31m[1merror[22m[39m: Login failed: Account is temporarily locked. Please try again later. 2026-01-19 23:37:06:376
+[36minfo[39m: Recieved POST request to /api/auth/login  2026-01-19 23:40:18:4018
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:40:18:4018
+[31m[1merror[22m[39m: Login failed: Invalid email or password 2026-01-19 23:40:19:4019
+[36minfo[39m: Recieved POST request to /api/auth/login  2026-01-19 23:40:26:4026
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:40:26:4026
+[31m[1merror[22m[39m: Login failed: Invalid email or password 2026-01-19 23:40:27:4027
+[36minfo[39m: Recieved POST request to /api/auth/login  2026-01-19 23:41:54:4154
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:41:54:4154
+[31m[1merror[22m[39m: Login failed: Invalid email or password 2026-01-19 23:41:55:4155
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-19 23:42:41:4241
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:42:41:4241
+[36minfo[39m: Recieved POST request to /api/auth/forgot-password  2026-01-19 23:43:39:4339
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:43:39:4339
+[36minfo[39m: OTP requested: gabbysoft2002@gmail.com 2026-01-19 23:43:39:4339
+[36minfo[39m: OTP requested: 489337 2026-01-19 23:43:39:4339
+[36minfo[39m: Recieved POST request to /api/auth/reset-password  2026-01-19 23:45:31:4531
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:45:31:4531
+[36minfo[39m: Password reset via OTP: gabbysoft2002@gmail.com 2026-01-19 23:45:33:4533
+[36minfo[39m: Recieved POST request to /api/auth/login  2026-01-19 23:45:42:4542
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:45:42:4542
+[36minfo[39m: Login successful: gabbysoft2002@gmail.com 2026-01-19 23:45:44:4544
+[36minfo[39m: Recieved GET request to /api//cart/getItem/695f58fec68549bebcdad682  2026-01-19 23:45:44:4544
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:45:44:4544
+[36minfo[39m: Recieved GET request to /api//saveItem/getItem/695f58fec68549bebcdad682  2026-01-19 23:45:44:4544
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:45:44:4544
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-19 23:45:45:4545
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:45:45:4545
+[36minfo[39m: Recieved GET request to /api/dashboard/top-selling?range=week  2026-01-19 23:45:45:4545
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:45:45:4545
+[36minfo[39m: Recieved GET request to /api//deals/today  2026-01-19 23:45:45:4545
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:45:45:4545
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-19 23:46:05:465
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:46:05:465
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-19 23:46:15:4615
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:46:15:4615
+[36minfo[39m: Recieved GET request to /api/dashboard/top-selling?range=week  2026-01-19 23:46:15:4615
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:46:15:4615
+[36minfo[39m: Recieved GET request to /api//deals/today  2026-01-19 23:46:15:4615
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:46:15:4615
+[36minfo[39m: Recieved GET request to /api//product/get_products?page=1&limit=12  2026-01-19 23:46:24:4624
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:46:24:4624
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-19 23:46:31:4631
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:46:31:4631
+[36minfo[39m: Recieved GET request to /api//product/get_product/69625f6cf0a31ecc2c2a5b10  2026-01-19 23:46:34:4634
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:46:34:4634
+[36minfo[39m: Recieved GET request to /api//product/get_products/Women's%20Shoes  2026-01-19 23:46:35:4635
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:46:35:4635
+[36minfo[39m: Recieved GET request to /api//product/get_product/69625f6cf0a31ecc2c2a5b10  2026-01-19 23:46:37:4637
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:46:37:4637
+[36minfo[39m: Recieved GET request to /api//product/get_products/Women's%20Shoes  2026-01-19 23:46:37:4637
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:46:37:4637
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-19 23:46:38:4638
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:46:38:4638
+[36minfo[39m: Recieved GET request to /api//review/get/69625f6cf0a31ecc2c2a5b10?page=1&limit=10  2026-01-19 23:46:47:4647
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:46:47:4647
+[36minfo[39m: Recieved GET request to /api//review/get/69625f6cf0a31ecc2c2a5b10?page=1&limit=10  2026-01-19 23:46:47:4647
+[36minfo[39m: Request body, [object Object]   2026-01-19 23:46:47:4647
+[36minfo[39m: Server is running on port:  5000 2026-01-20 21:42:25:4225
+[36minfo[39m: Connected to Redis 2026-01-20 21:42:25:4225
+[31m[1merror[22m[39m: mongo connection error querySrv ECONNREFUSED _mongodb._tcp.cluster0.y8t8dyn.mongodb.net 2026-01-20 21:42:25:4225
+[36minfo[39m: Recieved GET request to /api//product/get_product/69625f38f0a31ecc2c2a5b06  2026-01-20 21:44:24:4424
+[36minfo[39m: Request body, [object Object]   2026-01-20 21:44:24:4424
+[36minfo[39m: Recieved GET request to /api//product/get_product/69625f6cf0a31ecc2c2a5b10  2026-01-20 21:44:24:4424
+[36minfo[39m: Request body, [object Object]   2026-01-20 21:44:24:4424
+[36minfo[39m: Recieved GET request to /api//product/get_product/69625f6cf0a31ecc2c2a5b10  2026-01-20 21:46:21:4621
+[36minfo[39m: Request body, [object Object]   2026-01-20 21:46:21:4621
+[36minfo[39m: Recieved GET request to /api//product/get_product/69625f6cf0a31ecc2c2a5b10  2026-01-20 21:46:48:4648
+[36minfo[39m: Request body, [object Object]   2026-01-20 21:46:48:4648
+[36minfo[39m: Server is running on port:  5000 2026-01-20 21:48:08:488
+[36minfo[39m: Connected to Redis 2026-01-20 21:48:08:488
+[36minfo[39m: Connected to mongoDb 2026-01-20 21:48:17:4817
+[36minfo[39m: Recieved GET request to /api//product/get_product/69625f6cf0a31ecc2c2a5b10  2026-01-20 21:48:24:4824
+[36minfo[39m: Request body, [object Object]   2026-01-20 21:48:24:4824
+[36minfo[39m: Recieved GET request to /api//product/get_products/Women's%20Shoes  2026-01-20 21:48:25:4825
+[36minfo[39m: Request body, [object Object]   2026-01-20 21:48:26:4826
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-20 21:48:33:4833
+[36minfo[39m: Request body, [object Object]   2026-01-20 21:48:33:4833
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-20 21:48:38:4838
+[36minfo[39m: Request body, [object Object]   2026-01-20 21:48:39:4839
+[36minfo[39m: Recieved GET request to /api//cart/getItem/695f58fec68549bebcdad682  2026-01-20 21:48:39:4839
+[36minfo[39m: Request body, [object Object]   2026-01-20 21:48:39:4839
+[36minfo[39m: Recieved GET request to /api//saveItem/getItem/695f58fec68549bebcdad682  2026-01-20 21:48:40:4840
+[36minfo[39m: Request body, [object Object]   2026-01-20 21:48:40:4840
+[36minfo[39m: Recieved GET request to /api//review/get/69625f6cf0a31ecc2c2a5b10?page=1&limit=10  2026-01-20 21:49:13:4913
+[36minfo[39m: Request body, [object Object]   2026-01-20 21:49:14:4914
+[36minfo[39m: Recieved GET request to /api//review/get/69625f6cf0a31ecc2c2a5b10?page=1&limit=10  2026-01-20 21:49:14:4914
+[36minfo[39m: Request body, [object Object]   2026-01-20 21:49:14:4914
+[36minfo[39m: Recieved GET request to /api//product/get_product/69625f38f0a31ecc2c2a5b06  2026-01-20 21:49:25:4925
+[36minfo[39m: Request body, [object Object]   2026-01-20 21:49:25:4925
+[36minfo[39m: Recieved GET request to /api//product/get_products/Women's%20Shoes  2026-01-20 21:49:26:4926
+[36minfo[39m: Request body, [object Object]   2026-01-20 21:49:26:4926
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-20 21:49:28:4928
+[36minfo[39m: Request body, [object Object]   2026-01-20 21:49:28:4928
+[36minfo[39m: Recieved GET request to /api//cart/getItem/695f58fec68549bebcdad682  2026-01-20 21:49:58:4958
+[36minfo[39m: Request body, [object Object]   2026-01-20 21:49:58:4958
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-20 21:49:58:4958
+[36minfo[39m: Request body, [object Object]   2026-01-20 21:49:58:4958
+[36minfo[39m: Recieved GET request to /api//saveItem/getItem/695f58fec68549bebcdad682  2026-01-20 21:49:58:4958
+[36minfo[39m: Request body, [object Object]   2026-01-20 21:49:58:4958
+[36minfo[39m: Recieved GET request to /api//review/get/69625f38f0a31ecc2c2a5b06?page=1&limit=10  2026-01-20 21:50:35:5035
+[36minfo[39m: Request body, [object Object]   2026-01-20 21:50:35:5035
+[36minfo[39m: Recieved GET request to /api//review/get/69625f38f0a31ecc2c2a5b06?page=1&limit=10  2026-01-20 21:50:35:5035
+[36minfo[39m: Request body, [object Object]   2026-01-20 21:50:35:5035
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-20 21:51:17:5117
+[36minfo[39m: Request body, [object Object]   2026-01-20 21:51:18:5118
+[36minfo[39m: Recieved POST request to /api//cart/addItem  2026-01-20 21:51:32:5132
+[36minfo[39m: Request body, [object Object]   2026-01-20 21:51:32:5132
+[36minfo[39m: Recieved GET request to /api//cart/getItem/695f58fec68549bebcdad682  2026-01-20 21:51:33:5133
+[36minfo[39m: Request body, [object Object]   2026-01-20 21:51:33:5133
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-20 21:51:45:5145
+[36minfo[39m: Request body, [object Object]   2026-01-20 21:51:45:5145
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-20 21:52:00:520
+[36minfo[39m: Request body, [object Object]   2026-01-20 21:52:00:520
+[36minfo[39m: Recieved GET request to /api/auth/me  2026-01-20 21:52:15:5215
+[36minfo[39m: Request body, [object Object]   2026-01-20 21:52:15:5215
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-20 21:52:27:5227
+[36minfo[39m: Request body, [object Object]   2026-01-20 21:52:27:5227
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-20 21:58:18:5818
+[36minfo[39m: Request body, [object Object]   2026-01-20 21:58:18:5818
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-20 21:59:10:5910
+[36minfo[39m: Request body, [object Object]   2026-01-20 21:59:10:5910
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-20 22:02:49:249
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:02:49:249
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-20 22:28:50:2850
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:28:50:2850
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-20 22:30:56:3056
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:30:56:3056
+[36minfo[39m: Recieved GET request to /api/auth/me  2026-01-20 22:30:58:3058
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:30:58:3058
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-20 22:30:58:3058
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:30:58:3058
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-20 22:30:58:3058
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:30:58:3058
+[36minfo[39m: Recieved GET request to /api/auth/me  2026-01-20 22:31:18:3118
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:31:18:3118
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-20 22:35:56:3556
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:35:56:3556
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-20 22:36:07:367
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:36:07:367
+[36minfo[39m: Recieved GET request to /api//product/get_product/69625f6cf0a31ecc2c2a5b10  2026-01-20 22:46:23:4623
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:46:23:4623
+[36minfo[39m: Recieved POST request to /api/auth/refresh  2026-01-20 22:46:24:4624
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:46:24:4624
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-20 22:46:24:4624
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:46:24:4624
+[36minfo[39m: Recieved GET request to /api//product/get_products/Women's%20Shoes  2026-01-20 22:46:24:4624
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:46:24:4624
+[36minfo[39m: Recieved POST request to /api//cart/sync  2026-01-20 22:46:25:4625
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:46:25:4625
+[36minfo[39m: Recieved GET request to /api//saveItem/getItem/695f58fec68549bebcdad682  2026-01-20 22:46:25:4625
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:46:25:4625
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-20 22:46:29:4629
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:46:29:4629
+[36minfo[39m: Recieved GET request to /api//cart/getItem/695f58fec68549bebcdad682  2026-01-20 22:46:33:4633
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:46:33:4633
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-20 22:46:33:4633
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:46:33:4633
+[36minfo[39m: Recieved GET request to /api//saveItem/getItem/695f58fec68549bebcdad682  2026-01-20 22:46:33:4633
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:46:34:4634
+[36minfo[39m: Recieved GET request to /api/auth/me  2026-01-20 22:46:40:4640
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:46:40:4640
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-20 22:46:40:4640
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:46:40:4640
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-20 22:46:42:4642
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:46:42:4642
+[36minfo[39m: Recieved GET request to /api//product/get_product/69625f6cf0a31ecc2c2a5b10  2026-01-20 22:46:50:4650
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:46:50:4650
+[36minfo[39m: Recieved GET request to /api//product/get_products/Women's%20Shoes  2026-01-20 22:46:51:4651
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:46:51:4651
+[36minfo[39m: Recieved GET request to /api//cart/getItem/695f58fec68549bebcdad682  2026-01-20 22:46:57:4657
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:46:57:4657
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-20 22:46:57:4657
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:46:57:4657
+[36minfo[39m: Recieved GET request to /api//saveItem/getItem/695f58fec68549bebcdad682  2026-01-20 22:46:57:4657
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:46:57:4657
+[36minfo[39m: Recieved GET request to /api/auth/me  2026-01-20 22:47:18:4718
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:47:18:4718
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-20 22:47:18:4718
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:47:18:4718
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-20 22:47:23:4723
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:47:23:4723
+[36minfo[39m: Recieved GET request to /api//product/get_product/69625f6cf0a31ecc2c2a5b10  2026-01-20 22:48:06:486
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:48:06:486
+[36minfo[39m: Recieved GET request to /api//product/get_products/Women's%20Shoes  2026-01-20 22:48:07:487
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:48:07:487
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-20 22:48:08:488
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:48:08:488
+[36minfo[39m: Recieved GET request to /api//cart/getItem/695f58fec68549bebcdad682  2026-01-20 22:48:13:4813
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:48:13:4813
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-20 22:48:13:4813
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:48:13:4813
+[36minfo[39m: Recieved GET request to /api//saveItem/getItem/695f58fec68549bebcdad682  2026-01-20 22:48:13:4813
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:48:13:4813
+[36minfo[39m: Recieved GET request to /api/auth/me  2026-01-20 22:48:20:4820
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:48:20:4820
+[36minfo[39m: Recieved GET request to /api//cart/getItem/695f58fec68549bebcdad682  2026-01-20 22:48:25:4825
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:48:25:4825
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-20 22:48:25:4825
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:48:25:4825
+[36minfo[39m: Recieved GET request to /api//saveItem/getItem/695f58fec68549bebcdad682  2026-01-20 22:48:25:4825
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:48:25:4825
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-20 22:48:29:4829
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:48:29:4829
+[36minfo[39m: Recieved POST request to /api/auth/login  2026-01-20 22:48:35:4835
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:48:35:4835
+[36minfo[39m: Login successful: gabbysoft2002@gmail.com 2026-01-20 22:48:36:4836
+[36minfo[39m: Recieved GET request to /api//store/navigation-menu  2026-01-20 22:48:38:4838
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:48:38:4838
+[36minfo[39m: Recieved GET request to /api/dashboard/top-selling?range=week  2026-01-20 22:48:39:4839
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:48:39:4839
+[36minfo[39m: Recieved GET request to /api//deals/today  2026-01-20 22:48:39:4839
+[36minfo[39m: Request body, [object Object]   2026-01-20 22:48:39:4839

@@ -2,6 +2,7 @@ import { Types } from "mongoose";
 import { CartType } from "../Interface/productsType";
 import Cart from "../model/cartModel";
 import ProductDetails from "../model/productModel";
+import DealModel from "../model/dealModel";
 import logger from "../config/logger";
 
 export async function findExitingCartItem(userId: string) {
@@ -12,7 +13,42 @@ export async function getCartService(userId: string) {
   const cartItem = await Cart.findOne({ userId });
   if (!cartItem) return [];
   const populatedCart = await cartItem.populate("items.productId");
-  return populatedCart.items;
+
+  const now = new Date();
+
+  // Transform populated items to include deal pricing
+  const items = await Promise.all(
+    populatedCart.items.map(async (item: any) => {
+      const product = item.productId;
+      if (!product) return item;
+
+      const activeDeal = await DealModel.findOne({
+        productId: product._id,
+        startAt: { $lte: now },
+        endAt: { $gte: now },
+        isActive: true,
+      });
+
+      if (activeDeal) {
+        let dealPrice = product.price;
+        if (activeDeal.discountType === "PERCENT") {
+          dealPrice = product.price * (1 - activeDeal.discountValue / 100);
+        } else if (activeDeal.discountType === "FLAT") {
+          dealPrice = Math.max(0, product.price - activeDeal.discountValue);
+        }
+
+        return {
+          ...item.toObject(),
+          dealPrice,
+          isDealActive: true,
+        };
+      }
+
+      return item;
+    })
+  );
+
+  return items;
 }
 
 export async function addCartItemService(

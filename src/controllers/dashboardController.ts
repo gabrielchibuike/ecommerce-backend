@@ -5,6 +5,7 @@ import Review from "../model/reviewModel";
 import userDetails from "../model/authModel";
 import mongoose from "mongoose";
 import logger from "../config/logger";
+import DealModel from "../model/dealModel";
 
 export async function getDashboardSummaryController(
   req: Request,
@@ -144,11 +145,10 @@ export async function getTopSellingProductsController(
         $group: {
           _id: "$items.productId",
           totalSold: { $sum: "$items.quantity" },
-          revenue: { $sum: { $multiply: ["$items.quantity", "$items.price"] } },
         },
       },
       { $sort: { totalSold: -1 } },
-      { $limit: 6 },
+      { $limit: 4 },
       {
         $lookup: {
           from: "products",
@@ -159,18 +159,49 @@ export async function getTopSellingProductsController(
       },
       { $unwind: "$product" },
       {
-        $project: {
-          _id: 1,
-          name: "$product.product_name",
-          productId: "$product._id",
-          price: "$revenue",
-          image: { $arrayElemAt: ["$product.product_image", 0] },
-        },
+        $replaceRoot: { newRoot: "$product" },
       },
     ]);
 
+    // Populate deals and calculate prices
+    const now = new Date();
+    const result = await Promise.all(
+      topProducts.map(async (product: any) => {
+        const activeDeal = await DealModel.findOne({
+          productId: product._id,
+          startAt: { $lte: now },
+          endAt: { $gte: now },
+          isActive: true,
+        });
+
+        if (activeDeal) {
+          let dealPrice = product.price;
+          if (activeDeal.discountType === "PERCENT") {
+            dealPrice = product.price * (1 - activeDeal.discountValue / 100);
+          } else if (activeDeal.discountType === "FLAT") {
+            dealPrice = Math.max(0, product.price - activeDeal.discountValue);
+          }
+
+          return {
+            ...product,
+            dealPrice,
+            originalPrice: product.price,
+            discountPercentage:
+              activeDeal.discountType === "PERCENT"
+                ? activeDeal.discountValue
+                : Math.round(
+                    ((product.price - dealPrice) / product.price) * 100
+                  ),
+            isDealActive: true,
+            dealExpiry: activeDeal.endAt,
+          };
+        }
+        return product;
+      })
+    );
+
     res.status(200).json({
-      data: topProducts,
+      data: result,
       message: "Top selling products fetched successfully",
     });
   } catch (err: any) {

@@ -10,6 +10,7 @@ import {
 } from "../services/productService";
 import redis from "../redisClient";
 import logger from "../config/logger";
+import DealModel from "../model/dealModel";
 
 export async function create_product_controller(req: Request, res: Response) {
   try {
@@ -74,7 +75,52 @@ export async function get_product_controller(req: Request, res: Response) {
       sort_order,
     });
 
-    const data = { products, total, page, limit };
+    const totalPages = Math.ceil(total / limit);
+
+    // Check for active deals for each product
+    const now = new Date();
+    const productsWithDeals = await Promise.all(
+      products.map(async (product: any) => {
+        const activeDeal = await DealModel.findOne({
+          productId: product._id,
+          startAt: { $lte: now },
+          endAt: { $gte: now },
+          isActive: true,
+        });
+
+        if (activeDeal) {
+          let dealPrice = product.price;
+          if (activeDeal.discountType === "PERCENT") {
+            dealPrice = product.price * (1 - activeDeal.discountValue / 100);
+          } else if (activeDeal.discountType === "FLAT") {
+            dealPrice = Math.max(0, product.price - activeDeal.discountValue);
+          }
+
+          return {
+            ...product,
+            dealPrice,
+            originalPrice: product.price,
+            discountPercentage:
+              activeDeal.discountType === "PERCENT"
+                ? activeDeal.discountValue
+                : Math.round(
+                    ((product.price - dealPrice) / product.price) * 100
+                  ),
+            isDealActive: true,
+            dealExpiry: activeDeal.endAt,
+          };
+        }
+        return product;
+      })
+    );
+
+    const data = {
+      products: productsWithDeals,
+      total,
+      totalPages,
+      page,
+      limit,
+    };
     res.status(200).json({ data: data, message: "Retrieved successfully" });
   } catch (err: any) {
     res.status(500).json({ data: null, message: err.message });
@@ -84,8 +130,40 @@ export async function get_product_controller(req: Request, res: Response) {
 export async function getOne_product_controller(req: Request, res: Response) {
   const { id } = req.params;
   try {
-    const products = await getOne_product_service(id as string);
-    res.status(200).json({ data: products, message: "Retrieved successfully" });
+    const product = await getOne_product_service(id as string);
+    if (!product) return res.status(404).json({ message: "Product not found" });
+
+    const now = new Date();
+    const activeDeal = await DealModel.findOne({
+      productId: product._id,
+      startAt: { $lte: now },
+      endAt: { $gte: now },
+      isActive: true,
+    });
+
+    let result: any = product.toObject();
+    if (activeDeal) {
+      let dealPrice = product.price;
+      if (activeDeal.discountType === "PERCENT") {
+        dealPrice = product.price * (1 - activeDeal.discountValue / 100);
+      } else if (activeDeal.discountType === "FLAT") {
+        dealPrice = Math.max(0, product.price - activeDeal.discountValue);
+      }
+
+      result = {
+        ...result,
+        dealPrice,
+        originalPrice: product.price,
+        discountPercentage:
+          activeDeal.discountType === "PERCENT"
+            ? activeDeal.discountValue
+            : Math.round(((product.price - dealPrice) / product.price) * 100),
+        isDealActive: true,
+        dealExpiry: activeDeal.endAt,
+      };
+    }
+
+    res.status(200).json({ data: result, message: "Retrieved successfully" });
   } catch (err: any) {
     res.status(500).json({ error: err.message });
   }
