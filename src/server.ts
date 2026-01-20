@@ -33,7 +33,7 @@ app.use(
     // origin: "https://store-frontend-sage-xi.vercel.app/",
     origin: [
       // "http://localhost:3000",
-      "https://store-frontend-sage-xi.vercel.app/",
+      "https://store-frontend-sage-xi.vercel.app",
     ],
     credentials: true,
   }),
