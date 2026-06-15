@@ -1,0 +1,25 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+// import orderRoute from "./orderRoute";
+const cartRoute_1 = __importDefault(require("./cartRoute"));
+const authRoute_1 = __importDefault(require("./authRoute"));
+const productsRoute_1 = __importDefault(require("./productsRoute"));
+const saveItemRoute_1 = __importDefault(require("./saveItemRoute"));
+const orderRoute_1 = __importDefault(require("./orderRoute"));
+const shippingAddressRoutes_1 = __importDefault(require("./shippingAddressRoutes"));
+const storeRoutes_1 = __importDefault(require("./storeRoutes"));
+const reviewRoute_1 = __importDefault(require("./reviewRoute"));
+const allRoutes = express_1.default.Router();
+allRoutes.use("/auth/", authRoute_1.default);
+allRoutes.use("/cart", cartRoute_1.default);
+allRoutes.use("/order", orderRoute_1.default);
+allRoutes.use("/product", productsRoute_1.default);
+allRoutes.use("/saveItem", saveItemRoute_1.default);
+allRoutes.use("/shippingAddress", shippingAddressRoutes_1.default);
+allRoutes.use("/store", storeRoutes_1.default);
+allRoutes.use("/review", reviewRoute_1.default);
+exports.default = allRoutes;
